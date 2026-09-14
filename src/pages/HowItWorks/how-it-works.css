@@ -1,0 +1,1008 @@
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.how-it-works {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    padding: 105px 0;
+
+    background:
+        radial-gradient(circle at 10% 18%,
+            rgba(246, 173, 52, 0.10),
+            transparent 26%),
+        radial-gradient(circle at 88% 82%,
+            rgba(0, 80, 78, 0.10),
+            transparent 30%),
+        linear-gradient(180deg,
+            #ffffff 0%,
+            #f5faf8 100%);
+}
+
+
+/* =========================================================
+   ORBS
+========================================================= */
+
+.how-it-works__orb {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(20px);
+
+    z-index: -1;
+}
+
+.how-it-works__orb--one {
+    width: 430px;
+    height: 430px;
+
+    top: -250px;
+    left: -220px;
+
+    background:
+        radial-gradient(circle,
+            rgba(246, 173, 52, 0.16),
+            transparent 70%);
+}
+
+.how-it-works__orb--two {
+    width: 470px;
+    height: 470px;
+
+    right: -260px;
+    bottom: -250px;
+
+    background:
+        radial-gradient(circle,
+            rgba(0, 80, 78, 0.13),
+            transparent 70%);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.how-it-works__container {
+    width:
+        min(var(--container-width, 1200px),
+            calc(100% - 64px));
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.how-it-works__header {
+    max-width: 760px;
+
+    margin: 0 auto 52px;
+
+    text-align: center;
+}
+
+.how-it-works__eyebrow {
+    width: fit-content;
+
+    margin: 0 auto 17px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 13px;
+
+    border:
+        1px solid rgba(0, 80, 78, 0.11);
+
+    border-radius: 999px;
+
+    color: #00504e;
+
+    background:
+        rgba(255, 255, 255, 0.75);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 9px 24px rgba(16, 59, 60, 0.05);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+
+    text-transform: uppercase;
+}
+
+.how-it-works__header h2 {
+    margin: 0;
+
+    color: #0e2937;
+
+    font-size: clamp(44px, 4.7vw, 62px);
+
+    line-height: 1.03;
+
+    letter-spacing: -0.05em;
+
+    font-weight: 850;
+}
+
+.how-it-works__header h2 span {
+    color: #00504e;
+}
+
+.how-it-works__header p {
+    max-width: 690px;
+
+    margin: 18px auto 0;
+
+    color: #60747c;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   STEPS GRID
+========================================================= */
+
+.how-it-works__steps {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+.how-step-wrap {
+    position: relative;
+}
+
+
+/* =========================================================
+   STEPS GRID
+========================================================= */
+
+.how-it-works__steps {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+.how-step-wrap {
+    position: relative;
+}
+
+
+/* =========================================================
+   STEP CARD
+========================================================= */
+
+.how-step {
+    position: relative;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(0, 80, 78, 0.08);
+
+    border-radius: 24px;
+
+    background:
+        rgba(255, 255, 255, 0.90);
+
+    box-shadow:
+        0 18px 45px rgba(14, 41, 55, 0.09),
+        inset 0 1px 0 rgba(255, 255, 255, 0.92);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.how-step:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(0, 80, 78, 0.16);
+
+    box-shadow:
+        0 28px 60px rgba(14, 41, 55, 0.14);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.how-step__media {
+    position: relative;
+
+    overflow: hidden;
+
+    height: 245px;
+
+    margin: 9px;
+
+    border-radius: 18px;
+}
+
+
+.how-step__image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+.how-step:hover .how-step__image {
+    transform: scale(1.055);
+}
+
+
+/* image overlay */
+
+.how-step__image-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(180deg,
+            rgba(14, 41, 55, 0.02) 20%,
+            rgba(14, 41, 55, 0.08) 62%,
+            rgba(14, 41, 55, 0.43) 100%);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   STEP NUMBER BADGE
+========================================================= */
+
+.how-step__number {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    min-width: 70px;
+    height: 54px;
+
+    padding: 0 14px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.72);
+
+    border-radius: 13px;
+
+    color: #0e2937;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 9px 25px rgba(14, 41, 55, 0.10);
+
+    font-size: 20px;
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -0.03em;
+}
+
+
+.how-step__number span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #71848b;
+
+    font-size: 8px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+}
+
+
+/* =========================================================
+   FLOATING ICON
+========================================================= */
+
+.how-step__icon {
+    position: absolute;
+
+    right: 15px;
+    bottom: 15px;
+
+    width: 52px;
+    height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+        4px solid rgba(255, 255, 255, 0.92);
+
+    border-radius: 15px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #00504e 0%,
+            #178b81 100%);
+
+    box-shadow:
+        0 13px 27px rgba(0, 80, 78, 0.23);
+
+    z-index: 3;
+}
+
+
+/* alternate middle card */
+
+.how-step-wrap:nth-child(2) .how-step__icon {
+    background:
+        linear-gradient(135deg,
+            #f6ad34,
+            #f57900);
+
+    box-shadow:
+        0 13px 27px rgba(245, 121, 0, 0.25);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.how-step__content {
+    padding:
+        20px 24px 25px;
+}
+
+
+.how-step__mini-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #c26e0b;
+
+    font-size: 10px;
+    font-weight: 850;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+.how-step__content h3 {
+    margin: 0;
+
+    color: #0e2937;
+
+    font-size: 22px;
+    line-height: 1.25;
+
+    font-weight: 850;
+
+    letter-spacing: -0.025em;
+}
+
+
+.how-step__content>p {
+    min-height: 92px;
+
+    margin-top: 10px;
+
+    color: #667c84;
+
+    font-size: 14px;
+    line-height: 1.65;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.how-step__status {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 17px;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid rgba(14, 41, 55, 0.07);
+
+    color: #00504e;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+.how-step__status svg {
+    color: #f59a01;
+
+    stroke-width: 2.8;
+}
+
+
+/* =========================================================
+   CONNECTOR
+========================================================= */
+
+.how-step__connector {
+    position: absolute;
+
+    top: 120px;
+    right: -31px;
+
+    z-index: 6;
+
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+        1px solid rgba(0, 80, 78, 0.11);
+
+    border-radius: 50%;
+
+    color: #00504e;
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 9px 22px rgba(14, 41, 55, 0.10);
+}
+
+
+/* =========================================================
+   DARK THEME
+========================================================= */
+
+html.dark-theme .how-step {
+    border-color:
+        rgba(255, 255, 255, 0.08);
+
+    background:
+        rgba(16, 59, 60, 0.74);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.22);
+}
+
+
+html.dark-theme .how-step__content h3 {
+    color: #f4fafa;
+}
+
+
+html.dark-theme .how-step__content>p {
+    color: #abc1bf;
+}
+
+
+html.dark-theme .how-step__status {
+    color: #91d9cf;
+
+    border-color:
+        rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 980px) {
+
+    .how-it-works__steps {
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .how-step__connector {
+        display: none;
+    }
+
+
+    .how-step__media {
+        height: 310px;
+    }
+
+
+    .how-step__content>p {
+        min-height: auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .how-step {
+        border-radius: 20px;
+    }
+
+
+    .how-step__media {
+        height: 235px;
+
+        margin: 7px;
+
+        border-radius: 15px;
+    }
+
+
+    .how-step__number {
+        top: 12px;
+        left: 12px;
+
+        min-width: 64px;
+        height: 50px;
+    }
+
+
+    .how-step__icon {
+        width: 48px;
+        height: 48px;
+
+        right: 12px;
+        bottom: 12px;
+    }
+
+
+    .how-step__content {
+        padding:
+            18px 18px 22px;
+    }
+
+
+    .how-step__content h3 {
+        font-size: 21px;
+    }
+
+
+    .how-step__content>p {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   CTA PANEL
+========================================================= */
+
+.how-it-works__cta {
+    position: relative;
+    overflow: hidden;
+
+    margin-top: 32px;
+
+    padding: 25px 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border:
+        1px solid rgba(0, 80, 78, 0.10);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(233, 247, 244, 0.92),
+            rgba(255, 249, 238, 0.90));
+
+    box-shadow:
+        0 14px 34px rgba(16, 59, 60, 0.06);
+}
+
+.how-it-works__cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -80px;
+    top: -110px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(246, 173, 52, 0.14),
+            transparent 70%);
+}
+
+
+/* =========================================================
+   CTA TEXT
+========================================================= */
+
+.how-it-works__cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.how-it-works__cta-content span {
+    display: block;
+
+    color: #687b81;
+
+    font-size: 12px;
+}
+
+.how-it-works__cta-content strong {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #0e2937;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CTA ACTIONS
+========================================================= */
+
+.how-it-works__cta-actions {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 11px;
+}
+
+.how-it-works__button {
+    min-height: 54px;
+
+    padding: 0 21px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 13px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.how-it-works__button--primary {
+    color: #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #f6ad34 0%,
+            #f59a01 48%,
+            #f57900 100%);
+
+    box-shadow:
+        0 13px 28px rgba(245, 121, 0, 0.22);
+}
+
+.how-it-works__button--primary:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 18px 34px rgba(245, 121, 0, 0.29);
+}
+
+.how-it-works__button--secondary {
+    color: #00504e;
+
+    border:
+        1px solid rgba(0, 80, 78, 0.14);
+
+    background:
+        rgba(255, 255, 255, 0.78);
+}
+
+.how-it-works__button--secondary:hover {
+    transform: translateY(-2px);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 12px 25px rgba(16, 59, 60, 0.07);
+}
+
+
+/* =========================================================
+   DARK THEME
+========================================================= */
+
+html.dark-theme .how-it-works {
+    background:
+        radial-gradient(circle at 10% 18%,
+            rgba(246, 173, 52, 0.06),
+            transparent 26%),
+        radial-gradient(circle at 88% 82%,
+            rgba(67, 172, 157, 0.08),
+            transparent 30%),
+        linear-gradient(180deg,
+            #082e2e,
+            #0d3838);
+}
+
+html.dark-theme .how-it-works__header h2 {
+    color: #f5fafa;
+}
+
+html.dark-theme .how-it-works__header h2 span {
+    color: #8bd7ce;
+}
+
+html.dark-theme .how-it-works__header p {
+    color: #b9ccca;
+}
+
+html.dark-theme .how-it-works__eyebrow {
+    color: #8bd7ce;
+
+    border-color:
+        rgba(255, 255, 255, 0.08);
+
+    background:
+        rgba(255, 255, 255, 0.05);
+}
+
+html.dark-theme .how-step {
+    border-color:
+        rgba(255, 255, 255, 0.08);
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.025));
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+html.dark-theme .how-step h3 {
+    color: #f4fafa;
+}
+
+html.dark-theme .how-step>p {
+    color: #aac0bd;
+}
+
+html.dark-theme .how-step__number {
+    color:
+        rgba(139, 215, 206, 0.10);
+}
+
+html.dark-theme .how-step__status {
+    color: #8bd7ce;
+}
+
+html.dark-theme .how-step__connector {
+    color: #8bd7ce;
+
+    border-color:
+        rgba(255, 255, 255, 0.08);
+
+    background: #103b3c;
+}
+
+html.dark-theme .how-it-works__cta {
+    border-color:
+        rgba(255, 255, 255, 0.08);
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(246, 173, 52, 0.04));
+}
+
+html.dark-theme .how-it-works__cta-content span {
+    color: #a9bfbc;
+}
+
+html.dark-theme .how-it-works__cta-content strong {
+    color: #f4fafa;
+}
+
+html.dark-theme .how-it-works__button--secondary {
+    color: #f4fafa;
+
+    border-color:
+        rgba(255, 255, 255, 0.12);
+
+    background:
+        rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 980px) {
+
+    .how-it-works {
+        padding: 80px 0;
+    }
+
+    .how-it-works__steps {
+        grid-template-columns: 1fr;
+    }
+
+    .how-step {
+        min-height: 260px;
+    }
+
+    .how-step__connector {
+        display: none;
+    }
+
+    .how-it-works__cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .how-it-works {
+        padding: 62px 0;
+    }
+
+    .how-it-works__container {
+        width:
+            calc(100% - 32px);
+    }
+
+    .how-it-works__header {
+        margin-bottom: 36px;
+
+        text-align: left;
+    }
+
+    .how-it-works__eyebrow {
+        margin:
+            0 0 15px;
+    }
+
+    .how-it-works__header h2 {
+        font-size: 38px;
+    }
+
+    .how-it-works__header p {
+        font-size: 16px;
+    }
+
+    .how-step {
+        min-height: 285px;
+
+        padding: 23px 20px;
+    }
+
+    .how-step h3 {
+        font-size: 20px;
+    }
+
+    .how-step__status {
+        left: 20px;
+        bottom: 21px;
+    }
+
+    .how-it-works__cta {
+        padding: 21px 18px;
+    }
+
+    .how-it-works__cta-actions {
+        width: 100%;
+
+        display: grid;
+    }
+
+    .how-it-works__button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .how-step,
+    .how-it-works__button {
+        transition: none;
+    }
+}

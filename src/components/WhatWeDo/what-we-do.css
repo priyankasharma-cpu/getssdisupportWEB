@@ -1,0 +1,734 @@
+/* =========================================================
+   WHAT WE DO
+========================================================= */
+
+.what-we-do {
+    position: relative;
+    overflow: hidden;
+
+    padding: 112px 24px;
+
+    background:
+        radial-gradient(circle at 5% 10%,
+            rgba(0, 80, 78, 0.08),
+            transparent 28%),
+        radial-gradient(circle at 95% 85%,
+            rgba(245, 154, 1, 0.09),
+            transparent 27%),
+        linear-gradient(180deg,
+            #f8fbfa 0%,
+            #ffffff 48%,
+            #f8faf9 100%);
+}
+
+.what-we-do__container {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 1200px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   DECORATIVE ORBS
+========================================================= */
+
+.what-we-do__orb {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(4px);
+}
+
+.what-we-do__orb--one {
+    width: 330px;
+    height: 330px;
+
+    top: -190px;
+    left: -140px;
+
+    background:
+        rgba(0, 80, 78, 0.08);
+}
+
+.what-we-do__orb--two {
+    width: 300px;
+    height: 300px;
+
+    right: -120px;
+    bottom: -160px;
+
+    background:
+        rgba(245, 154, 1, 0.08);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.what-we-do__header {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.35fr) minmax(300px, 0.65fr);
+
+    align-items: end;
+
+    gap: 80px;
+
+    margin-bottom: 54px;
+}
+
+.what-we-do__eyebrow {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 17px;
+
+    padding: 8px 13px;
+
+    border: 1px solid rgba(0, 80, 78, 0.12);
+    border-radius: 999px;
+
+    color: #00504e;
+
+    background:
+        rgba(0, 80, 78, 0.055);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.11em;
+
+    text-transform: uppercase;
+}
+
+.what-we-do__eyebrow svg {
+    color: #f59a01;
+}
+
+.what-we-do__heading h2 {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #0e2937;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: clamp(40px, 4.3vw, 62px);
+    line-height: 1.06;
+
+    font-weight: 850;
+
+    letter-spacing: -0.045em;
+}
+
+.what-we-do__heading h2 span {
+    color: #f57900;
+}
+
+.what-we-do__intro p {
+    margin: 0;
+
+    color: #667b82;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 16px;
+    line-height: 1.75;
+
+    font-weight: 500;
+}
+
+.what-we-do__header-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 19px;
+
+    padding: 0;
+
+    border: 0;
+
+    color: #00504e;
+
+    background: transparent;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        gap 0.25s ease,
+        color 0.25s ease;
+}
+
+.what-we-do__header-link:hover {
+    gap: 12px;
+    color: #f57900;
+}
+
+
+/* =========================================================
+   SERVICE GRID
+========================================================= */
+
+.what-we-do__grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.what-service-card {
+    position: relative;
+
+    min-height: 285px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 26px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(14, 41, 55, 0.075);
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    box-shadow:
+        0 18px 45px rgba(14, 41, 55, 0.075),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+    transition:
+        transform 0.32s ease,
+        box-shadow 0.32s ease,
+        border-color 0.32s ease;
+}
+
+
+/* Asymmetric premium layout */
+
+.what-service-card:nth-child(1),
+.what-service-card:nth-child(2),
+.what-service-card:nth-child(3) {
+    grid-column: span 2;
+}
+
+.what-service-card:nth-child(4),
+.what-service-card:nth-child(5) {
+    grid-column: span 3;
+}
+
+
+.what-service-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    top: -80px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background:
+        var(--card-glow);
+
+    opacity: 0.12;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+
+.what-service-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(0, 80, 78, 0.14);
+
+    box-shadow:
+        0 28px 60px rgba(14, 41, 55, 0.13);
+}
+
+.what-service-card:hover::before {
+    transform: scale(1.25);
+
+    opacity: 0.18;
+}
+
+
+/* =========================================================
+   CARD COLORS
+========================================================= */
+
+.what-service-card--emerald {
+    --card-color: #00504e;
+    --card-soft: #e8f5f2;
+    --card-glow: #28a997;
+}
+
+.what-service-card--teal {
+    --card-color: #147c78;
+    --card-soft: #e9f7f6;
+    --card-glow: #42bdb0;
+}
+
+.what-service-card--gold {
+    --card-color: #c8780b;
+    --card-soft: #fff5df;
+    --card-glow: #f6ad34;
+}
+
+.what-service-card--blue {
+    --card-color: #246a8d;
+    --card-soft: #eaf4f9;
+    --card-glow: #55a6c9;
+}
+
+.what-service-card--peach {
+    --card-color: #cf681b;
+    --card-soft: #fff0e6;
+    --card-glow: #f59a55;
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.what-service-card__top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+.what-service-card__icon {
+    width: 56px;
+    height: 56px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 17px;
+
+    color: var(--card-color);
+
+    background:
+        var(--card-soft);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.what-service-card__number {
+    color: rgba(14, 41, 55, 0.18);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+    font-weight: 900;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.what-service-card__content {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+}
+
+.what-service-card__content h3 {
+    max-width: 310px;
+
+    margin: 0;
+
+    color: #0e2937;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 21px;
+    line-height: 1.3;
+
+    font-weight: 800;
+
+    letter-spacing: -0.025em;
+}
+
+.what-service-card__content p {
+    max-width: 440px;
+
+    margin: 11px 0 0;
+
+    color: #687c83;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    font-weight: 500;
+}
+
+
+/* Bottom accent */
+
+.what-service-card__line {
+    width: 36px;
+    height: 3px;
+
+    margin-top: 24px;
+
+    border-radius: 999px;
+
+    background:
+        var(--card-color);
+
+    transition: width 0.3s ease;
+}
+
+.what-service-card:hover .what-service-card__line {
+    width: 72px;
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.what-we-do__cta {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 24px;
+
+    padding: 25px 28px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(135deg,
+            #0e2937 0%,
+            #103b3c 55%,
+            #00504e 100%);
+
+    box-shadow:
+        0 22px 48px rgba(14, 41, 55, 0.18);
+}
+
+.what-we-do__cta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: 12%;
+    top: -190px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(246, 173, 52, 0.13);
+}
+
+.what-we-do__cta-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 54px;
+    height: 54px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 16px;
+
+    color: #ffd275;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.13);
+}
+
+.what-we-do__cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.what-we-do__cta-content span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #f6ad34;
+
+    font-size: 9px;
+    font-weight: 850;
+
+    letter-spacing: 0.14em;
+}
+
+.what-we-do__cta-content strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    line-height: 1.35;
+
+    font-weight: 800;
+}
+
+.what-we-do__cta-content p {
+    margin: 3px 0 0;
+
+    color: #bfd0cf;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.what-we-do__cta-button {
+    position: relative;
+    z-index: 2;
+
+    min-height: 52px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 0 22px;
+
+    border: 0;
+    border-radius: 13px;
+
+    color: #1b3134;
+
+    background:
+        linear-gradient(135deg,
+            #f6ad34 0%,
+            #f59a01 48%,
+            #f57900 100%);
+
+    box-shadow:
+        0 10px 26px rgba(245, 121, 0, 0.25);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+    font-weight: 850;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.what-we-do__cta-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 32px rgba(245, 121, 0, 0.32);
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+html.dark-theme .what-we-do {
+    background:
+        radial-gradient(circle at 5% 10%,
+            rgba(46, 169, 151, 0.08),
+            transparent 30%),
+        #082d2d;
+}
+
+html.dark-theme .what-we-do__heading h2,
+html.dark-theme .what-service-card__content h3 {
+    color: #f4fafa;
+}
+
+html.dark-theme .what-we-do__intro p,
+html.dark-theme .what-service-card__content p {
+    color: #adc1c0;
+}
+
+html.dark-theme .what-service-card {
+    border-color:
+        rgba(255, 255, 255, 0.08);
+
+    background:
+        rgba(16, 59, 60, 0.72);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 980px) {
+
+    .what-we-do {
+        padding: 90px 22px;
+    }
+
+    .what-we-do__header {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .what-we-do__intro {
+        max-width: 650px;
+    }
+
+    .what-we-do__grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .what-service-card:nth-child(n) {
+        grid-column: auto;
+    }
+
+    .what-service-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .what-we-do {
+        padding: 72px 16px;
+    }
+
+    .what-we-do__header {
+        margin-bottom: 36px;
+    }
+
+    .what-we-do__heading h2 {
+        font-size: 38px;
+
+        line-height: 1.09;
+    }
+
+    .what-we-do__intro p {
+        font-size: 15px;
+    }
+
+    .what-we-do__grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .what-service-card:nth-child(n) {
+        grid-column: auto;
+    }
+
+    .what-service-card {
+        min-height: auto;
+
+        padding: 22px;
+
+        border-radius: 19px;
+    }
+
+    .what-service-card__top {
+        margin-bottom: 22px;
+    }
+
+    .what-service-card__content h3 {
+        font-size: 20px;
+    }
+
+    .what-we-do__cta {
+        grid-template-columns: auto 1fr;
+
+        padding: 22px 19px;
+    }
+
+    .what-we-do__cta-button {
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        margin-top: 5px;
+    }
+
+}

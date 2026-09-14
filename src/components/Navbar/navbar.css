@@ -1,0 +1,614 @@
+:root {
+    /* Emerald Theme Colors */
+    --color-header-bg: rgba(16, 59, 60, 0.92);
+    --color-header-border: rgba(255, 255, 255, 0.12);
+    --color-text-light: #E2E8F0;
+    --color-text-white: #FFFFFF;
+    --color-accent-amber: #F6AD34;
+
+    /* Modern Gradients */
+    --gradient-cta-primary: linear-gradient(135deg, #F57900 0%, #F59A01 100%);
+    --gradient-cta-secondary: linear-gradient(135deg, #F6AD34 0%, #F59A01 100%);
+    --gradient-glow: rgba(245, 121, 0, 0.25);
+    --gradient-glow-amber: rgba(246, 173, 52, 0.25);
+}
+
+/* Base Header with Glassmorphism */
+.site-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: var(--color-header-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--color-header-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-container {
+    width: min(1280px, calc(100% - 48px));
+    min-height: 76px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* Pro Brand Logo */
+.navbar-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.02);
+}
+
+.navbar-logo__main {
+    color: var(--color-text-white);
+    background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-logo__support {
+    color: var(--color-accent-amber);
+    background: var(--gradient-cta-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Links */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar-link {
+    position: relative;
+    padding: 10px 0;
+    color: var(--color-text-light);
+    font-size: 14.5px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.25s ease;
+}
+
+.navbar-link:hover {
+    color: var(--color-accent-amber);
+}
+
+.navbar-link--active {
+    color: var(--color-text-white);
+    font-weight: 600;
+}
+
+.navbar-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2.5px;
+    border-radius: 4px;
+    background: var(--gradient-cta-secondary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.navbar-link:hover::after,
+.navbar-link--active::after {
+    width: 100%;
+}
+
+/* Actions Section */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+/* =========================================================
+   PREMIUM CALL BUTTON
+========================================================= */
+
+.navbar-call {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+
+    min-width: 190px;
+    height: 54px;
+
+    padding: 0 18px 0 14px;
+
+    border-radius: 18px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.22),
+            rgba(255, 255, 255, 0.08)),
+        linear-gradient(135deg,
+            #ee7a0e,
+            #f07d30f8);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    box-shadow:
+        0 8px 24px rgba(245, 121, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.38);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+/* Glass shine */
+
+.navbar-call::before {
+    content: "";
+
+    position: absolute;
+    top: -60%;
+    left: -50%;
+
+    width: 70%;
+    height: 220%;
+
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.32),
+            transparent);
+
+    transform: rotate(20deg);
+
+    animation: navbarCallShine 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   PHONE ICON WRAPPER
+========================================================= */
+
+.navbar-call__icon {
+    position: relative;
+    z-index: 2;
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #f57900;
+    background: rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+
+/* Phone ringing animation */
+
+.navbar-call__icon svg {
+    position: relative;
+    z-index: 3;
+
+    transform-origin: center;
+
+    animation: phoneRing 2.2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   RING WAVES
+========================================================= */
+
+.navbar-call__ring {
+    position: absolute;
+
+    inset: -4px;
+
+    border-radius: 50%;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.9);
+
+    opacity: 0;
+
+    animation: callPulse 2s ease-out infinite;
+}
+
+.navbar-call__ring--two {
+    animation-delay: 0.7s;
+}
+
+
+/* =========================================================
+   CALL TEXT
+========================================================= */
+
+.navbar-call__content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.1;
+}
+
+.navbar-call__label {
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.navbar-call__number {
+    margin-top: 3px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.02em;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.navbar-call:hover {
+    transform: translateY(-3px) scale(1.02);
+
+    box-shadow:
+        0 13px 30px rgba(245, 121, 0, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.42);
+
+    filter: brightness(1.05);
+}
+
+.navbar-call:hover .navbar-call__icon {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   CHECK ELIGIBILITY BUTTON
+========================================================= */
+
+.navbar-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    height: 54px;
+    padding: 0 24px;
+
+    border-radius: 20px;
+
+    color: #ffffff;
+
+    background: var(--gradient-cta-primary);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 24px var(--gradient-glow);
+
+    transition: all 0.3s ease;
+}
+
+.navbar-cta:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px var(--gradient-glow);
+
+    filter: brightness(1.08);
+}
+
+.navbar-cta svg {
+    transition: transform 0.25s ease;
+}
+
+.navbar-cta:hover svg {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes phoneRing {
+
+    0%,
+    70%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    74% {
+        transform: rotate(14deg);
+    }
+
+    78% {
+        transform: rotate(-12deg);
+    }
+
+    82% {
+        transform: rotate(10deg);
+    }
+
+    86% {
+        transform: rotate(-8deg);
+    }
+
+    90% {
+        transform: rotate(4deg);
+    }
+}
+
+@keyframes callPulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.65;
+    }
+
+    100% {
+        transform: scale(1.45);
+        opacity: 0;
+    }
+}
+
+@keyframes navbarCallShine {
+
+    0%,
+    65% {
+        left: -60%;
+    }
+
+    100% {
+        left: 130%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+    .navbar-call {
+        min-width: auto;
+        height: 48px;
+
+        padding: 0 12px;
+    }
+
+    .navbar-call__number {
+        font-size: 11px;
+    }
+
+    .navbar-call__label {
+        font-size: 9px;
+    }
+
+    .navbar-call__icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .navbar-cta {
+        height: 48px;
+        padding: 0 18px;
+    }
+}
+
+/* Mobile Toggle Toggle Button */
+.navbar-mobile-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-header-border);
+    border-radius: 10px;
+    color: var(--color-text-white);
+    background: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+/* Mobile Dropdown Styling */
+.navbar-mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .navbar-nav {
+        gap: 20px;
+    }
+
+    .navbar-link {
+        font-size: 13.5px;
+    }
+}
+
+@media (max-width: 868px) {
+    .navbar-container {
+        width: calc(100% - 32px);
+        min-height: 68px;
+    }
+
+    .navbar-nav,
+    .navbar-actions {
+        display: none;
+    }
+
+    .navbar-mobile-toggle {
+        display: flex;
+    }
+
+    .navbar-mobile {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+
+        background: rgba(16, 59, 60, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        border-bottom: 1px solid var(--color-header-border);
+
+        transition:
+            max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .navbar-mobile--open {
+        max-height: calc(100vh - 68px);
+        overflow-y: auto;
+    }
+
+    .navbar-mobile__nav {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 24px;
+    }
+
+    .navbar-mobile__link {
+        padding: 14px 0;
+        color: var(--color-text-light);
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar-mobile__link--active {
+        color: var(--color-accent-amber);
+        font-weight: 700;
+    }
+
+    .navbar-mobile__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 24px 28px;
+    }
+
+    .mobile-theme-toggle,
+    .navbar-mobile__call,
+    .navbar-mobile__cta {
+        width: 100%;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .mobile-theme-toggle {
+        border: 1px solid var(--color-header-border);
+        color: var(--color-text-white);
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar-mobile__call {
+        color: #0F172A;
+        background: var(--gradient-cta-secondary);
+    }
+
+    .navbar-mobile__cta {
+        color: #FFFFFF;
+        background: var(--gradient-cta-primary);
+    }
+}
+
+/* =========================================================
+   NAVBAR SECTION BUTTON RESET
+========================================================= */
+
+.navbar-link--button {
+    border: 0;
+    padding: 0;
+
+    font: inherit;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+/* Mobile section buttons */
+
+.navbar-mobile__link--button {
+    width: 100%;
+
+    border: 0;
+
+    font: inherit;
+
+    text-align: left;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+/* CTA is now button instead of Link */
+
+button.navbar-cta,
+button.navbar-mobile__cta {
+    border: 0;
+
+    font: inherit;
+
+    cursor: pointer;
+}
