@@ -17,7 +17,7 @@ const Footer = () => {
         { label: "SSI", path: "/ssi" },
         { label: "Eligibility", path: "/eligibility" },
         { label: "How It Works", path: "/how-it-works" },
-        { label: "FAQ", path: "/faq" },
+        { label: "FAQ", type: "route", path: "/faq" },
     ];
 
     const resourceLinks = [
@@ -62,7 +62,7 @@ const Footer = () => {
 
                         {/* Call Card */}
                         <a
-                            href="tel:+18005555555"
+                            href="tel:+18339917969"
                             className="footer-call-card"
                         >
                             <span className="footer-call-icon">
@@ -138,8 +138,8 @@ const Footer = () => {
 
                             <div>
                                 <small>Phone</small>
-                                <a href="tel:+18005555555">
-                                    +1 (800) 555-5555
+                                <a href="tel:+18339917969">
+                                    +1 (833) 991-7969
                                 </a>
                             </div>
                         </div>

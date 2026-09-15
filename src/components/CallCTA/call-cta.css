@@ -1,0 +1,605 @@
+/* =========================================================
+   CALL CTA
+========================================================= */
+
+.call-cta {
+    position: relative;
+    overflow: hidden;
+
+    padding: 88px 24px 30px;
+
+    background:
+        linear-gradient(125deg,
+            #0e2937 0%,
+            #103b3c 52%,
+            #00504e 100%);
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.call-cta__glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(2px);
+}
+
+
+.call-cta__glow--left {
+    width: 400px;
+    height: 400px;
+
+    top: -250px;
+    left: -170px;
+
+    background:
+        rgba(60, 190, 172, 0.10);
+}
+
+
+.call-cta__glow--right {
+    width: 360px;
+    height: 360px;
+
+    right: -140px;
+    bottom: -210px;
+
+    background:
+        rgba(246, 173, 52, 0.11);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.call-cta__container {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 1200px);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr) minmax(390px, 0.85fr);
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.call-cta__content {
+    max-width: 650px;
+}
+
+
+.call-cta__eyebrow {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    padding: 8px 13px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 999px;
+
+    color: #8eddd1;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+.call-cta__eyebrow svg {
+    color: #f6ad34;
+}
+
+
+.call-cta__content h2 {
+    max-width: 680px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: clamp(40px, 4.5vw, 62px);
+
+    line-height: 1.06;
+
+    font-weight: 850;
+
+    letter-spacing: -0.045em;
+}
+
+
+.call-cta__content h2 span {
+    color: #f6ad34;
+}
+
+
+.call-cta__description {
+    max-width: 600px;
+
+    margin: 20px 0 0;
+
+    color: #c1d2d1;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TRUST POINTS
+========================================================= */
+
+.call-cta__trust {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 11px 22px;
+
+    margin-top: 28px;
+}
+
+
+.call-cta__trust span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #e3eeee;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 650;
+}
+
+
+.call-cta__trust svg {
+    color: #73d6c6;
+
+    stroke-width: 3;
+}
+
+
+/* =========================================================
+   RIGHT PANEL
+========================================================= */
+
+.call-cta__panel {
+    position: relative;
+
+    padding: 25px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.13);
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.11),
+            rgba(255, 255, 255, 0.055));
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.call-cta__panel-top {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 21px;
+}
+
+
+.call-cta__phone-icon {
+    position: relative;
+
+    width: 57px;
+    height: 57px;
+
+    flex: 0 0 auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 17px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #0b8c7d,
+            #00504e);
+
+    box-shadow:
+        0 12px 27px rgba(0, 0, 0, 0.18);
+}
+
+
+.call-cta__panel-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #f6ad34;
+
+    font-size: 9px;
+
+    font-weight: 850;
+
+    letter-spacing: 0.12em;
+}
+
+
+.call-cta__panel-top strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 19px;
+
+    line-height: 1.3;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CALL BUTTON
+========================================================= */
+
+.call-cta__call-button {
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 10px 16px;
+
+    border-radius: 16px;
+
+    color: #183235;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(135deg,
+            #f6ad34 0%,
+            #f59a01 48%,
+            #f57900 100%);
+
+    box-shadow:
+        0 14px 32px rgba(245, 121, 0, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.call-cta__call-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 38px rgba(245, 121, 0, 0.34);
+}
+
+
+.call-cta__call-button-icon {
+    width: 43px;
+    height: 43px;
+
+    flex: 0 0 auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    background:
+        rgba(14, 41, 55, 0.18);
+}
+
+
+.call-cta__call-copy {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.call-cta__call-copy small {
+    margin-bottom: 2px;
+
+    font-size: 10px;
+
+    font-weight: 750;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
+
+.call-cta__call-copy strong {
+    font-size: 19px;
+
+    line-height: 1.2;
+
+    font-weight: 850;
+
+    letter-spacing: -0.02em;
+}
+
+
+.call-cta__arrow {
+    transition: transform 0.25s ease;
+}
+
+
+.call-cta__call-button:hover .call-cta__arrow {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   SECONDARY ACTION
+========================================================= */
+
+.call-cta__eligibility {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 16px;
+
+    padding: 5px;
+
+    border: 0;
+
+    color: #d5e5e3;
+
+    background: transparent;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: color 0.25s ease;
+}
+
+
+.call-cta__eligibility:hover {
+    color: #f6ad34;
+}
+
+
+/* =========================================================
+   PRIVACY
+========================================================= */
+
+.call-cta__privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 13px;
+
+    color: #91aaa8;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 550;
+}
+
+
+/* =========================================================
+   DISCLAIMER
+========================================================= */
+
+.call-cta__disclaimer {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 1200px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin: 44px auto 0;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    color: #829c9a;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .call-cta__container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .call-cta__content {
+        max-width: 720px;
+    }
+
+
+    .call-cta__panel {
+        max-width: 600px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .call-cta {
+        padding:
+            70px 16px 25px;
+    }
+
+
+    .call-cta__container {
+        gap: 36px;
+    }
+
+
+    .call-cta__content h2 {
+        font-size: 38px;
+    }
+
+
+    .call-cta__description {
+        font-size: 15px;
+    }
+
+
+    .call-cta__trust {
+        display: grid;
+
+        gap: 11px;
+    }
+
+
+    .call-cta__panel {
+        padding: 18px;
+
+        border-radius: 20px;
+    }
+
+
+    .call-cta__phone-icon {
+        width: 50px;
+        height: 50px;
+
+        border-radius: 14px;
+    }
+
+
+    .call-cta__panel-top strong {
+        font-size: 17px;
+    }
+
+
+    .call-cta__call-button {
+        min-height: 66px;
+
+        padding: 9px 12px;
+    }
+
+
+    .call-cta__call-copy strong {
+        font-size: 17px;
+    }
+
+
+    .call-cta__disclaimer {
+        align-items: flex-start;
+
+        margin-top: 34px;
+
+        text-align: left;
+    }
+
+}

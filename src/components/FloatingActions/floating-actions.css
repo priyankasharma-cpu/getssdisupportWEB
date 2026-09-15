@@ -1,0 +1,410 @@
+/* =========================================================
+   GLOBAL FLOATING ACTIONS
+========================================================= */
+
+.gss-floating-actions {
+    position: fixed;
+
+    right: 24px;
+    bottom: 25px;
+
+    z-index: 9990;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   BASE BUTTON
+========================================================= */
+
+.gss-floating-action {
+    position: relative;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.gss-floating-action__icon {
+    position: relative;
+    z-index: 4;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: inherit;
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.gss-floating-action--whatsapp {
+    background:
+        linear-gradient(135deg,
+            #2bd46f 0%,
+            #25d366 45%,
+            #13a84d 100%);
+
+    box-shadow:
+        0 12px 30px rgba(37, 211, 102, 0.30);
+}
+
+
+.gss-floating-action--whatsapp::before {
+    content: "";
+
+    position: absolute;
+    inset: -5px;
+
+    border:
+        1px solid rgba(37, 211, 102, 0.28);
+
+    border-radius: 50%;
+
+    animation:
+        gssWhatsappPulse 2.4s ease-out infinite;
+}
+
+
+.gss-floating-action--whatsapp:hover {
+    transform:
+        translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 16px 38px rgba(37, 211, 102, 0.40);
+}
+
+
+/* online dot */
+
+.gss-floating-action__online {
+    position: absolute;
+
+    z-index: 7;
+
+    top: 1px;
+    right: 1px;
+
+    width: 12px;
+    height: 12px;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: #72e58e;
+
+    box-shadow:
+        0 0 0 3px rgba(114, 229, 142, 0.15);
+}
+
+
+/* =========================================================
+   CALL BUTTON
+========================================================= */
+
+.gss-floating-action--call {
+    background:
+        linear-gradient(135deg,
+            #f6ad34 0%,
+            #f59a01 48%,
+            #f57900 100%);
+
+    box-shadow:
+        0 13px 32px rgba(245, 121, 0, 0.34);
+}
+
+
+.gss-floating-action--call:hover {
+    transform:
+        translateY(-4px) scale(1.06);
+
+    box-shadow:
+        0 17px 40px rgba(245, 121, 0, 0.44);
+}
+
+
+/* =========================================================
+   INCOMING CALL ANIMATION
+========================================================= */
+
+.gss-floating-action__phone svg {
+    animation:
+        gssIncomingCall 1.7s ease-in-out infinite;
+
+    transform-origin: center;
+}
+
+
+.gss-call-ring {
+    position: absolute;
+
+    z-index: 1;
+
+    top: 50%;
+    left: 50%;
+
+    width: 58px;
+    height: 58px;
+
+    border:
+        2px solid rgba(245, 154, 1, 0.50);
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    pointer-events: none;
+
+    animation:
+        gssCallRing 2s ease-out infinite;
+}
+
+
+.gss-call-ring--two {
+    animation-delay: 0.85s;
+}
+
+
+/* =========================================================
+   TOOLTIP
+========================================================= */
+
+.gss-floating-action__tooltip {
+    position: absolute;
+
+    top: 50%;
+    right: calc(100% + 13px);
+
+    transform:
+        translateY(-50%) translateX(8px);
+
+    min-width: max-content;
+
+    padding: 9px 12px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    background: #103b3c;
+
+    box-shadow:
+        0 8px 22px rgba(14, 41, 55, 0.18);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+    font-weight: 750;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.22s ease,
+        visibility 0.22s ease,
+        transform 0.22s ease;
+}
+
+
+.gss-floating-action__tooltip::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    right: -5px;
+
+    width: 10px;
+    height: 10px;
+
+    background: #103b3c;
+
+    transform:
+        translateY(-50%) rotate(45deg);
+}
+
+
+.gss-floating-action:hover .gss-floating-action__tooltip {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(-50%) translateX(0);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes gssIncomingCall {
+
+    0%,
+    65%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    70% {
+        transform: rotate(-13deg);
+    }
+
+    75% {
+        transform: rotate(13deg);
+    }
+
+    80% {
+        transform: rotate(-11deg);
+    }
+
+    85% {
+        transform: rotate(11deg);
+    }
+
+    90% {
+        transform: rotate(-6deg);
+    }
+
+    95% {
+        transform: rotate(6deg);
+    }
+}
+
+
+@keyframes gssCallRing {
+
+    0% {
+        width: 58px;
+        height: 58px;
+
+        opacity: 0.65;
+    }
+
+    100% {
+        width: 92px;
+        height: 92px;
+
+        opacity: 0;
+    }
+}
+
+
+@keyframes gssWhatsappPulse {
+
+    0% {
+        transform: scale(0.95);
+        opacity: 0.65;
+    }
+
+    100% {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .gss-floating-actions {
+        right: 16px;
+        bottom: 18px;
+
+        gap: 12px;
+    }
+
+
+    .gss-floating-action {
+        width: 54px;
+        height: 54px;
+    }
+
+
+    .gss-call-ring {
+        width: 54px;
+        height: 54px;
+    }
+
+
+    .gss-floating-action__tooltip {
+        display: none;
+    }
+
+
+    @keyframes gssCallRing {
+
+        0% {
+            width: 54px;
+            height: 54px;
+
+            opacity: 0.6;
+        }
+
+        100% {
+            width: 82px;
+            height: 82px;
+
+            opacity: 0;
+        }
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .gss-floating-action,
+    .gss-floating-action *,
+    .gss-floating-action::before {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}

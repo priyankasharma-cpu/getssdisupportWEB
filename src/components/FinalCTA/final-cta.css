@@ -1,0 +1,409 @@
+/* =========================================================
+   MOBILE GLOBAL STICKY CTA
+========================================================= */
+
+.mobile-final-cta {
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .mobile-final-cta {
+        position: fixed;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: 9998;
+
+        display: block;
+
+        padding:
+            9px 10px calc(9px + env(safe-area-inset-bottom));
+
+        border-top:
+            1px solid rgba(255, 255, 255, 0.12);
+
+        background:
+            rgba(10, 37, 43, 0.96);
+
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+
+        box-shadow:
+            0 -10px 35px rgba(6, 27, 32, 0.18);
+    }
+
+
+    /* =====================================================
+       INNER
+    ===================================================== */
+
+    .mobile-final-cta__inner {
+        width: 100%;
+        max-width: 600px;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr) minmax(0, 1fr);
+
+        gap: 8px;
+
+        margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       BUTTON BASE
+    ===================================================== */
+
+    .mobile-final-cta__button {
+        position: relative;
+
+        min-width: 0;
+        min-height: 57px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 9px;
+
+        padding: 8px 12px;
+
+        overflow: hidden;
+
+        border: 0;
+        border-radius: 13px;
+
+        font-family: "Inter", sans-serif;
+
+        text-decoration: none;
+
+        cursor: pointer;
+
+        -webkit-tap-highlight-color: transparent;
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+
+    .mobile-final-cta__button:active {
+        transform: scale(0.97);
+    }
+
+
+    /* =====================================================
+       CALL
+    ===================================================== */
+
+    .mobile-final-cta__button--call {
+        color: #ffffff;
+
+        background:
+            linear-gradient(135deg,
+                #00645f 0%,
+                #00504e 55%,
+                #103b3c 100%);
+
+        border:
+            1px solid rgba(118, 222, 206, 0.18);
+
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+
+    /* =====================================================
+       CHECK NOW
+    ===================================================== */
+
+    .mobile-final-cta__button--check {
+        color: #173536;
+
+        background:
+            linear-gradient(135deg,
+                #f6ad34 0%,
+                #f59a01 48%,
+                #f57900 100%);
+
+        box-shadow:
+            0 8px 22px rgba(245, 121, 0, 0.28),
+            inset 0 1px 0 rgba(255, 255, 255, 0.28);
+    }
+
+
+    /* shine */
+
+    .mobile-final-cta__button--check::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: -100%;
+
+        width: 55%;
+        height: 100%;
+
+        transform: skewX(-20deg);
+
+        background:
+            linear-gradient(90deg,
+                transparent,
+                rgba(255, 255, 255, 0.23),
+                transparent);
+
+        animation:
+            mobileCtaShine 4s ease-in-out infinite;
+    }
+
+
+    /* =====================================================
+       ICON
+    ===================================================== */
+
+    .mobile-final-cta__icon {
+        position: relative;
+        z-index: 2;
+
+        width: 34px;
+        height: 34px;
+
+        flex: 0 0 auto;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 10px;
+    }
+
+
+    .mobile-final-cta__button--call .mobile-final-cta__icon {
+        color: #ffffff;
+
+        background:
+            rgba(255, 255, 255, 0.10);
+    }
+
+
+    .mobile-final-cta__button--check .mobile-final-cta__icon {
+        color: #173536;
+
+        background:
+            rgba(255, 255, 255, 0.24);
+    }
+
+
+    /* =====================================================
+       CALL RING
+    ===================================================== */
+
+    .mobile-final-cta__button--call svg {
+        position: relative;
+        z-index: 2;
+
+        animation:
+            mobilePhoneRing 2s ease-in-out infinite;
+    }
+
+
+    .mobile-final-cta__call-ring {
+        position: absolute;
+
+        inset: 4px;
+
+        border:
+            1px solid rgba(117, 222, 206, 0.55);
+
+        border-radius: 8px;
+
+        animation:
+            mobileCallPulse 1.8s ease-out infinite;
+    }
+
+
+    /* =====================================================
+       TEXT
+    ===================================================== */
+
+    .mobile-final-cta__text {
+        position: relative;
+        z-index: 2;
+
+        min-width: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        text-align: left;
+
+        line-height: 1;
+    }
+
+
+    .mobile-final-cta__text small {
+        margin-bottom: 4px;
+
+        font-size: 7px;
+        font-weight: 800;
+
+        letter-spacing: 0.11em;
+
+        opacity: 0.72;
+    }
+
+
+    .mobile-final-cta__text strong {
+        font-size: 13px;
+        font-weight: 900;
+
+        letter-spacing: 0.015em;
+
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       IMPORTANT:
+       SPACE AT BOTTOM OF WEBSITE
+    ===================================================== */
+
+    body {
+        padding-bottom:
+            calc(78px + env(safe-area-inset-bottom));
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .mobile-final-cta {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .mobile-final-cta__inner {
+        gap: 6px;
+    }
+
+    .mobile-final-cta__button {
+        min-height: 54px;
+
+        gap: 7px;
+
+        padding:
+            7px 8px;
+    }
+
+    .mobile-final-cta__icon {
+        width: 31px;
+        height: 31px;
+    }
+
+    .mobile-final-cta__text strong {
+        font-size: 11px;
+    }
+
+    .mobile-final-cta__text small {
+        font-size: 6px;
+    }
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes mobilePhoneRing {
+
+    0%,
+    65%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    70% {
+        transform: rotate(-12deg);
+    }
+
+    75% {
+        transform: rotate(12deg);
+    }
+
+    80% {
+        transform: rotate(-9deg);
+    }
+
+    85% {
+        transform: rotate(9deg);
+    }
+
+    90% {
+        transform: rotate(0deg);
+    }
+
+}
+
+
+@keyframes mobileCallPulse {
+
+    0% {
+        transform: scale(0.85);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes mobileCtaShine {
+
+    0%,
+    60% {
+        left: -100%;
+    }
+
+    80%,
+    100% {
+        left: 150%;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .mobile-final-cta *,
+    .mobile-final-cta *::before,
+    .mobile-final-cta *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}

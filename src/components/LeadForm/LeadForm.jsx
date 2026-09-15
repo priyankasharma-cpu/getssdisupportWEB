@@ -493,7 +493,7 @@ const LeadForm = () => {
                                 Our support team is available to help.
                             </strong>
 
-                            <a href="tel:+18005555555">
+                            <a href="tel:+18339917969">
                                 <Phone size={16} />
                                 Call Now
                             </a>
@@ -547,8 +547,8 @@ const LeadForm = () => {
 
                         <div
                             className={`lead-stepper__line ${stage > 1
-                                    ? "lead-stepper__line--complete"
-                                    : ""
+                                ? "lead-stepper__line--complete"
+                                : ""
                                 }`}
                         />
 
@@ -561,8 +561,8 @@ const LeadForm = () => {
 
                         <div
                             className={`lead-stepper__line ${stage > 2
-                                    ? "lead-stepper__line--complete"
-                                    : ""
+                                ? "lead-stepper__line--complete"
+                                : ""
                                 }`}
                         />
 
@@ -837,8 +837,8 @@ const QuestionScreen = ({
                     key={option}
                     type="button"
                     className={`lead-option ${value === option
-                            ? "lead-option--selected"
-                            : ""
+                        ? "lead-option--selected"
+                        : ""
                         }`}
                     onClick={() => onSelect(option)}
                 >
@@ -1077,9 +1077,9 @@ const ClaimantInformation = ({
                             key={method}
                             type="button"
                             className={`lead-contact-method ${answers.contactMethod ===
-                                    method
-                                    ? "lead-contact-method--selected"
-                                    : ""
+                                method
+                                ? "lead-contact-method--selected"
+                                : ""
                                 }`}
                             onClick={() =>
                                 updateAnswer(
@@ -1267,9 +1267,9 @@ const ReviewStep = ({
                                     type="button"
                                     key={time}
                                     className={`lead-callback__time ${answers.callbackTime ===
-                                            time
-                                            ? "lead-callback__time--selected"
-                                            : ""
+                                        time
+                                        ? "lead-callback__time--selected"
+                                        : ""
                                         }`}
                                     onClick={() =>
                                         updateAnswer(

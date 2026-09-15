@@ -1,0 +1,799 @@
+/* =========================================================
+   BODY
+========================================================= */
+
+body.call-popup-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   POPUP
+========================================================= */
+
+.call-popup {
+    position: fixed;
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.call-popup__overlay {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    border: 0;
+
+    background:
+        rgba(4, 20, 24, 0.72);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    cursor: pointer;
+
+    animation:
+        callOverlayIn 0.3s ease forwards;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.call-popup__modal {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 455px);
+
+    overflow: hidden;
+
+    padding:
+        25px 29px 24px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.13);
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 50% 10%,
+            rgba(38, 176, 157, 0.18),
+            transparent 32%),
+        linear-gradient(145deg,
+            #0e2937 0%,
+            #103b3c 57%,
+            #064c4a 100%);
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.09);
+
+    animation:
+        callModalIn 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* subtle top line */
+
+.call-popup__modal::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 15%;
+
+    width: 70%;
+    height: 1px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(246, 173, 52, 0.7),
+            transparent);
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.call-popup__close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    z-index: 5;
+
+    width: 35px;
+    height: 35px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.11);
+
+    border-radius: 50%;
+
+    color: #c7d8d6;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.call-popup__close:hover {
+    transform: rotate(90deg);
+
+    color: #ffffff;
+
+    background:
+        rgba(255, 255, 255, 0.13);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.call-popup__brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding-right: 30px;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.call-popup__brand svg {
+    color: #7cddcf;
+}
+
+.call-popup__brand small {
+    margin-left: 2px;
+
+    color: #91aaa7;
+
+    font-size: 8px;
+    font-weight: 650;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   INCOMING CALL ANIMATION
+========================================================= */
+
+.call-popup__call-animation {
+    position: relative;
+
+    width: 112px;
+    height: 112px;
+
+    display: grid;
+    place-items: center;
+
+    margin: 27px auto 13px;
+}
+
+
+/* RINGS */
+
+.call-popup__ring {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 72px;
+    height: 72px;
+
+    border:
+        1px solid rgba(102, 218, 201, 0.34);
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    animation:
+        callRing 2.2s ease-out infinite;
+}
+
+.call-popup__ring--two {
+    animation-delay: 0.7s;
+}
+
+.call-popup__ring--three {
+    animation-delay: 1.4s;
+}
+
+
+/* PHONE CIRCLE */
+
+.call-popup__phone-circle {
+    position: relative;
+    z-index: 3;
+
+    width: 72px;
+    height: 72px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #0ba08e 0%,
+            #006b64 55%,
+            #00504e 100%);
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.24),
+        0 0 0 7px rgba(77, 205, 186, 0.08);
+
+    animation:
+        incomingPhone 1.7s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.call-popup__status {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin: 0 auto 13px;
+
+    color: #8edfd2;
+
+    font-size: 8px;
+    font-weight: 850;
+
+    letter-spacing: 0.15em;
+}
+
+.call-popup__status-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #63ddc8;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 221, 200, 0.10);
+
+    animation:
+        liveDot 1.4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.call-popup__modal h2 {
+    max-width: 370px;
+
+    margin: 0 auto;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 29px;
+    line-height: 1.13;
+
+    font-weight: 850;
+
+    letter-spacing: -0.04em;
+}
+
+.call-popup__modal h2 span {
+    color: #f6ad34;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.call-popup__lead {
+    max-width: 350px;
+
+    margin: 12px auto 0;
+
+    color: #b9cdca;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    line-height: 1.65;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.call-popup__trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 7px 13px;
+
+    margin-top: 17px;
+}
+
+.call-popup__trust span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    color: #dbe8e6;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+    font-weight: 650;
+}
+
+.call-popup__trust svg {
+    color: #69d4c4;
+
+    stroke-width: 3;
+}
+
+
+/* =========================================================
+   MAIN CALL BUTTON
+========================================================= */
+
+.call-popup__button {
+    position: relative;
+
+    width: 100%;
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 21px;
+
+    padding: 10px 12px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    color: #183234;
+
+    text-align: left;
+    text-decoration: none;
+
+    background:
+        linear-gradient(135deg,
+            #f6ad34 0%,
+            #f59a01 48%,
+            #f57900 100%);
+
+    box-shadow:
+        0 14px 34px rgba(245, 121, 0, 0.31),
+        inset 0 1px 0 rgba(255, 255, 255, 0.30);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* light sweep */
+
+.call-popup__button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    transform: skewX(-22deg);
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.28),
+            transparent);
+
+    animation:
+        callButtonShine 3.4s ease-in-out infinite;
+}
+
+
+.call-popup__button:hover {
+    transform:
+        translateY(-3px) scale(1.01);
+
+    box-shadow:
+        0 19px 42px rgba(245, 121, 0, 0.40);
+}
+
+
+/* button phone */
+
+.call-popup__button-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 47px;
+    height: 47px;
+
+    flex: 0 0 auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 13px;
+
+    color: #ffffff;
+
+    background:
+        rgba(14, 41, 55, 0.19);
+
+    animation:
+        buttonPhone 1.8s ease-in-out infinite;
+}
+
+
+/* number */
+
+.call-popup__button-copy {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.call-popup__button-copy small {
+    margin-bottom: 2px;
+
+    font-size: 8px;
+    font-weight: 850;
+
+    letter-spacing: 0.11em;
+}
+
+.call-popup__button-copy strong {
+    font-size: 19px;
+    line-height: 1.15;
+
+    font-weight: 900;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* call badge */
+
+.call-popup__button-live {
+    position: relative;
+    z-index: 2;
+
+    padding: 7px 9px;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    background:
+        rgba(14, 41, 55, 0.17);
+
+    font-size: 8px;
+    font-weight: 900;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.call-popup__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 14px;
+
+    color: #819c99;
+
+    font-size: 8px;
+    line-height: 1.4;
+}
+
+.call-popup__footer svg {
+    flex: 0 0 auto;
+
+    color: #719e98;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes callOverlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes callModalIn {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(28px) scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0) scale(1);
+    }
+}
+
+
+@keyframes callRing {
+    0% {
+        width: 65px;
+        height: 65px;
+
+        opacity: 0.7;
+    }
+
+    100% {
+        width: 112px;
+        height: 112px;
+
+        opacity: 0;
+    }
+}
+
+
+@keyframes incomingPhone {
+
+    0%,
+    100% {
+        transform:
+            rotate(0deg) scale(1);
+    }
+
+    10% {
+        transform:
+            rotate(-7deg) scale(1.03);
+    }
+
+    20% {
+        transform:
+            rotate(7deg) scale(1.03);
+    }
+
+    30% {
+        transform:
+            rotate(-6deg) scale(1.03);
+    }
+
+    40% {
+        transform:
+            rotate(6deg) scale(1.03);
+    }
+
+    50% {
+        transform:
+            rotate(0deg) scale(1);
+    }
+}
+
+
+@keyframes buttonPhone {
+
+    0%,
+    70%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-8deg);
+    }
+
+    80% {
+        transform: rotate(8deg);
+    }
+
+    85% {
+        transform: rotate(-6deg);
+    }
+
+    90% {
+        transform: rotate(6deg);
+    }
+}
+
+
+@keyframes liveDot {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+}
+
+
+@keyframes callButtonShine {
+
+    0%,
+    55% {
+        left: -120%;
+    }
+
+    78%,
+    100% {
+        left: 150%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .call-popup {
+        padding: 14px;
+    }
+
+
+    .call-popup__modal {
+        width: 100%;
+
+        padding:
+            22px 18px 19px;
+
+        border-radius: 23px;
+    }
+
+
+    .call-popup__brand {
+        justify-content: flex-start;
+    }
+
+
+    .call-popup__call-animation {
+        width: 95px;
+        height: 95px;
+
+        margin-top: 23px;
+    }
+
+
+    .call-popup__phone-circle {
+        width: 65px;
+        height: 65px;
+    }
+
+
+    .call-popup__modal h2 {
+        font-size: 26px;
+    }
+
+
+    .call-popup__button-copy strong {
+        font-size: 17px;
+    }
+
+
+    .call-popup__button-live {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .call-popup *,
+    .call-popup *::before,
+    .call-popup *::after {
+        animation: none !important;
+
+        transition: none !important;
+    }
+
+}

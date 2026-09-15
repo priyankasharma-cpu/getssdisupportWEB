@@ -6,7 +6,7 @@ import AboutSection from "../../components/AboutSection/AboutSection";
 import LeadForm from "../../components/LeadForm/LeadForm";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import WhatWeDo from "../../components/WhatWeDo/WhatWeDo";
-
+import CallCTA from "../../components/CallCTA/CallCTA";
 const Home = () => {
     return (
         <main className="home-page">
@@ -16,7 +16,9 @@ const Home = () => {
             <Eligibility />
             <LeadForm />
             <HowItWorks />
+            <CallCTA />
             <WhatWeDo />
+
         </main>
     );
 };

@@ -7,8 +7,16 @@ import {
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import Home from "./pages/Home/Home";
 
+import CallPopup from "./components/CallPopup/CallPopup";
+import FloatingActions from "./components/FloatingActions/FloatingActions";
+import FinalCTA from "./components/FinalCTA/FinalCTA";
+
+import Home from "./pages/Home/Home";
+import FAQPage from "./pages/FAQ/FAQPage";
+
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import Terms from "./pages/Terms/Terms";
 
 /* =====================================================
    SCROLL HANDLER
@@ -67,11 +75,30 @@ function App() {
           path="/"
           element={<Home />}
         />
+        <Route path="/faq" element={<FAQPage />} />
 
+        <Route
+          path="/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+
+        <Route
+          path="/terms"
+          element={<Terms />}
+        />
 
       </Routes>
 
       <Footer />
+
+      {/* GLOBAL FLOATING CONTACT BUTTONS */}
+      <FloatingActions />
+
+      {/* GLOBAL CALL POPUP */}
+      <CallPopup />
+
+      {/* GLOBAL MOBILE STICKY CTA */}
+      <FinalCTA />
     </>
   );
 }

@@ -160,7 +160,7 @@ const Hero = () => {
 
 
                         <a
-                            href="tel:+18005555555"
+                            href="tel:+18339917969"
                             className="hero__btn hero__btn--call"
                         >
                             <span className="hero__call-icon">
@@ -174,7 +174,7 @@ const Hero = () => {
                                 <small>Free Consultation</small>
                                 <strong>Call Now</strong>
                                 <span className="hero__call-number">
-                                    +1 (800) 555-5555
+                                    +1 (833) 991-7969
                                 </span>
                             </span>
                         </a>
@@ -393,7 +393,7 @@ const Hero = () => {
                                     {/* CALL CTA */}
 
                                     <a
-                                        href="tel:+18005555555"
+                                        href="tel:+18339917969"
                                         className="hero__result-call"
                                     >
 
@@ -407,7 +407,7 @@ const Hero = () => {
 
 
                                         <span className="hero__result-phone">
-                                            (800) 555-5555
+                                            +1(833) 991-7969
                                         </span>
 
                                     </a>

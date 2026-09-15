@@ -148,7 +148,7 @@ const Navbar = () => {
                 <div className="navbar-actions">
 
                     <a
-                        href="tel:+18005555555"
+                        href="tel:+18339917969"
                         className="navbar-call"
                     >
                         <span className="navbar-call__icon">
@@ -165,7 +165,7 @@ const Navbar = () => {
                             </span>
 
                             <span className="navbar-call__number">
-                                +1 (800) 555-5555
+                                +1 (833) 991-7969
                             </span>
                         </span>
                     </a>
@@ -266,7 +266,7 @@ const Navbar = () => {
                 <div className="navbar-mobile__actions">
 
                     <a
-                        href="tel:+18005555555"
+                        href="tel:+18339917969"
                         className="navbar-mobile__call"
                         onClick={closeMobileMenu}
                     >
