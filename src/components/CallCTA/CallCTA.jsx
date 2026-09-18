@@ -96,7 +96,7 @@ const CallCTA = () => {
 
 
                     <a
-                        href="tel:+18005555555"
+                        href="tel:+18339917969"
                         className="call-cta__call-button"
                     >
                         <span className="call-cta__call-button-icon">
@@ -105,7 +105,7 @@ const CallCTA = () => {
 
                         <span className="call-cta__call-copy">
                             <small>Call Now</small>
-                            <strong>+1 (800) 555-5555</strong>
+                            <strong>+1 (833) 991-7969</strong>
                         </span>
 
                         <ArrowRight

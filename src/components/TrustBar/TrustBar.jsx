@@ -4,7 +4,9 @@ import {
     CheckCircle2,
     HeartHandshake,
 } from "lucide-react";
+
 import "./trust-bar.css";
+
 
 const trustItems = [
     {
@@ -29,6 +31,7 @@ const trustItems = [
     },
 ];
 
+
 const TrustBar = () => {
     return (
         <section
@@ -36,6 +39,9 @@ const TrustBar = () => {
             aria-label="GetSSDISupport trust information"
         >
             <div className="trust-bar__container">
+
+                {/* ================= INTRO ================= */}
+
                 <div className="trust-bar__intro">
                     <span className="trust-bar__eyebrow">
                         Built Around Clarity
@@ -47,6 +53,9 @@ const TrustBar = () => {
                     </p>
                 </div>
 
+
+                {/* ================= TRUST CARDS ================= */}
+
                 <div className="trust-bar__grid">
                     {trustItems.map((item) => {
                         const Icon = item.icon;
@@ -56,21 +65,31 @@ const TrustBar = () => {
                                 className="trust-bar__item"
                                 key={item.title}
                             >
-                                <div className="trust-bar__icon">
-                                    <Icon size={20} />
+                                <div
+                                    className="trust-bar__icon"
+                                    aria-hidden="true"
+                                >
+                                    <Icon />
                                 </div>
 
                                 <div className="trust-bar__content">
-                                    <strong>{item.title}</strong>
-                                    <span>{item.text}</span>
+                                    <strong>
+                                        {item.title}
+                                    </strong>
+
+                                    <span>
+                                        {item.text}
+                                    </span>
                                 </div>
                             </div>
                         );
                     })}
                 </div>
+
             </div>
         </section>
     );
 };
+
 
 export default TrustBar;

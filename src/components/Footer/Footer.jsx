@@ -21,19 +21,19 @@ const Footer = () => {
 
     const quickLinks = [
         {
-            label: "Home",
+            label: "Get SSDI Information",
             path: "/",
         },
         {
-            label: "Eligibility",
+            label: "SSDI Eligibility Information",
             path: "/eligibility",
         },
         {
-            label: "How It Works",
+            label: "SSDI Application Guide",
             path: "/how-it-works",
         },
         {
-            label: "FAQ",
+            label: "Understand SSDI Benefits",
             path: "/faq",
         },
     ];
@@ -41,12 +41,16 @@ const Footer = () => {
 
     const resourceLinks = [
         {
-            label: "Disability Conditions",
+            label: "Disability Benefit Options",
             path: "/conditions",
         },
         {
             label: "About Us",
             path: "/about",
+        },
+        {
+            label: "Disability Support Resources",
+            path: "/disability-resources"
         },
 
     ];
@@ -103,13 +107,11 @@ const Footer = () => {
                             className="footer-logo"
                             aria-label="GetSSDI Support Home"
                         >
-                            <span className="footer-logo__main">
-                                GetSSDI
-                            </span>
-
-                            <span className="footer-logo__support">
-                                Support
-                            </span>
+                            <img
+                                src="/image/getssdi-logo.png"
+                                alt="GetSSDI Support"
+                                className="footer-logo__image"
+                            />
                         </Link>
 
 

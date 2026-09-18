@@ -148,7 +148,7 @@ const Eligibility = () => {
 
 
                             <a
-                                href="tel:+18666207617"
+                                href="tel:+18339917969"
                                 className="eligibility-call-btn"
                             >
 
@@ -162,7 +162,7 @@ const Eligibility = () => {
                                     </small>
 
                                     <strong>
-                                        (866) 620-7617
+                                        +1 (833) 991-7969
                                     </strong>
                                 </span>
 
@@ -830,7 +830,7 @@ const Eligibility = () => {
 
 
                     <a
-                        href="tel:+18666207617"
+                        href="tel:+18339917969"
                         className="eligibility-callout__button"
                     >
 
@@ -841,7 +841,7 @@ const Eligibility = () => {
                                 Call Now
                             </small>
 
-                            (866) 620-7617
+                            +1 (833) 991-7969
                         </span>
 
                     </a>
@@ -889,8 +889,8 @@ const Eligibility = () => {
                                     Still have questions?
                                 </small>
 
-                                <a href="tel:+18666207617">
-                                    Call (866) 620-7617
+                                <a href="tel:+18339917969">
+                                    Call +1 (833) 991-7969
                                 </a>
                             </span>
 
@@ -990,12 +990,12 @@ const Eligibility = () => {
 
 
                         <a
-                            href="tel:+18666207617"
+                            href="tel:+18339917969"
                             className="eligibility-final__call"
                         >
                             <Phone size={19} />
 
-                            Call (866) 620-7617
+                            Call +1 (833) 991-7969
                         </a>
 
                     </div>

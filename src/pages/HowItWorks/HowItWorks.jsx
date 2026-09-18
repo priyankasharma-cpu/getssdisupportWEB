@@ -205,7 +205,7 @@ const HowItWorks = () => {
                     <div className="how-it-works__cta-actions">
 
                         <a
-                            href="#quick-eligibility"
+                            href="/eligibility"
                             className="how-it-works__button how-it-works__button--primary"
                         >
                             Start My Eligibility Check
@@ -214,7 +214,7 @@ const HowItWorks = () => {
                         </a>
 
                         <a
-                            href="tel:+18005555555"
+                            href="tel:+18339917969"
                             className="how-it-works__button how-it-works__button--secondary"
                         >
                             <PhoneCall size={17} />

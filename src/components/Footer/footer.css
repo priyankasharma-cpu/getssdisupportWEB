@@ -119,48 +119,42 @@
 }
 
 
-/* LOGO */
+/* LOGO IMAGE */
 
-.footer-logo {
-    display: inline-flex;
-    align-items: center;
+.footer-logo__image {
+    display: block;
+    width: auto;
+    height: 78px;
+    max-width: 330px;
+    object-fit: contain;
+    border-radius: 8px;
+}
 
-    gap: 5px;
+/* Tablet */
+@media (max-width: 1024px) {
+    .footer-logo__image {
+        height: 54px;
+        max-width: 215px;
+    }
+}
 
-    text-decoration: none;
+/* Mobile */
+@media (max-width: 600px) {
+    .footer-logo__image {
+        height: 48px;
+        max-width: 195px;
+    }
+}
 
-    font-size: 25px;
-    font-weight: 800;
-
-    letter-spacing: -0.04em;
-
-    transition:
-        transform 0.25s ease,
-        opacity 0.25s ease;
+/* Small Mobile */
+@media (max-width: 400px) {
+    .footer-logo__image {
+        height: 44px;
+        max-width: 180px;
+    }
 }
 
 
-.footer-logo:hover {
-    transform: translateY(-1px);
-}
-
-
-.footer-logo__main {
-    color: #ffffff;
-}
-
-
-.footer-logo__support {
-    background: linear-gradient(135deg,
-            #ffe08a 0%,
-            #f6ad34 45%,
-            #f57900 100%);
-
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-}
 
 
 /* DESCRIPTION */

@@ -19,6 +19,8 @@ import Eligibility from "./pages/Eligibility/Eligibility";
 import Conditions from "./pages/Conditions/Conditions";
 import HowItWorks from "./pages/HowItWorks/HowItWorks";
 
+
+import DisabilityResources from "./pages/DisabilityResources/DisabilityResources";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import Terms from "./pages/Terms/Terms";
 
@@ -85,6 +87,11 @@ function App() {
         <Route path="/conditions" element={<Conditions />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
 
+
+        <Route
+          path="/disability-resources"
+          element={<DisabilityResources />}
+        />
 
         <Route
           path="/privacy-policy"

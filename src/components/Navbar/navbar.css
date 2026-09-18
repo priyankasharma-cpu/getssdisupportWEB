@@ -37,34 +37,63 @@
     gap: 24px;
 }
 
-/* Pro Brand Logo */
+/* =========================================================
+   NAVBAR LOGO
+========================================================= */
+
 .navbar-logo {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 23px;
-    font-weight: 800;
-    letter-spacing: -0.03em;
+    flex-shrink: 0;
     text-decoration: none;
-    transition: transform 0.2s ease;
+
+    transition: transform 0.25s ease;
 }
 
 .navbar-logo:hover {
     transform: scale(1.02);
 }
 
-.navbar-logo__main {
-    color: var(--color-text-white);
-    background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.navbar-logo__image {
+    display: block;
+
+    width: auto;
+    height: 62px;
+    max-width: 210px;
+    border-radius: 8px;
+
+    object-fit: contain;
+    object-position: left center;
 }
 
-.navbar-logo__support {
-    color: var(--color-accent-amber);
-    background: var(--gradient-cta-secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+    .navbar-logo__image {
+        height: 48px;
+        max-width: 195px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .navbar-logo__image {
+        height: 43px;
+        max-width: 175px;
+    }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 400px) {
+    .navbar-logo__image {
+        height: 39px;
+        max-width: 160px;
+    }
 }
 
 /* Navigation Links */

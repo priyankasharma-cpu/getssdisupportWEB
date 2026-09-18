@@ -6,7 +6,12 @@ import {
     LockKeyhole,
     Phone,
     ShieldCheck,
+    BadgeCheck,
+    Users,
+    HeartHandshake
 } from "lucide-react";
+
+
 
 import "./hero.css";
 
@@ -452,78 +457,69 @@ const Hero = () => {
             </div>
 
 
-            {/* =================================================
-                BOTTOM TRUST STRIP
-            ================================================= */}
-
             <div className="hero__stats">
-
                 <div className="hero__stats-inner">
 
                     <div className="hero__stat">
+                        <div className="hero__stat-icon">
+                            <ShieldCheck size={24} />
+                        </div>
 
-                        <strong>FREE</strong>
-
-                        <span>
-                            Eligibility Review
-                        </span>
-
-                        <small>
-                            Start with a simple review of your
-                            situation.
-                        </small>
-
+                        <div className="hero__stat-content">
+                            <strong>Free</strong>
+                            <span>Eligibility Review</span>
+                            <small>
+                                Learn about your potential disability benefit options.
+                            </small>
+                        </div>
                     </div>
 
 
                     <div className="hero__stat">
+                        <div className="hero__stat-icon">
+                            <BadgeCheck size={24} />
+                        </div>
 
-                        <strong>50 STATES</strong>
-
-                        <span>
-                            Nationwide Support
-                        </span>
-
-                        <small>
-                            Help designed for people across the
-                            United States.
-                        </small>
-
+                        <div className="hero__stat-content">
+                            <strong>SSDI &amp; SSI</strong>
+                            <span>Benefit Guidance</span>
+                            <small>
+                                Clear information about disability benefit programs.
+                            </small>
+                        </div>
                     </div>
 
 
                     <div className="hero__stat">
+                        <div className="hero__stat-icon">
+                            <Users size={24} />
+                        </div>
 
-                        <strong>SSDI + SSI</strong>
-
-                        <span>
-                            Claim Guidance
-                        </span>
-
-                        <small>
-                            Understand possible next steps in the
-                            disability process.
-                        </small>
-
+                        <div className="hero__stat-content">
+                            <strong>Nationwide</strong>
+                            <span>Support Across the U.S.</span>
+                            <small>
+                                Helping people understand their available next steps.
+                            </small>
+                        </div>
                     </div>
 
 
                     <div className="hero__stat">
+                        <div className="hero__stat-icon">
+                            <HeartHandshake size={24} />
+                        </div>
 
-                        <strong>NO OBLIGATION</strong>
-
-                        <span>
-                            To Check Options
-                        </span>
-
-                        <small>
-                            Explore your situation without pressure.
-                        </small>
-
+                        <div className="hero__stat-content">
+                            <strong>Simple</strong>
+                            <span>Easy-to-Understand Help</span>
+                            <small>
+                                Straightforward guidance without unnecessary confusion.
+                            </small>
+                        </div>
                     </div>
 
                 </div>
-
             </div>
 
         </section>

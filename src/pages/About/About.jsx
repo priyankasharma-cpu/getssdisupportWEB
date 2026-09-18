@@ -76,7 +76,7 @@ const About = () => {
                             </Link>
 
                             <a
-                                href="tel:+18666207617"
+                                href="tel:+18339917969 "
                                 className="about-btn about-btn--call"
                             >
                                 <span className="about-call-icon">
@@ -85,7 +85,7 @@ const About = () => {
 
                                 <span>
                                     <small>Questions? Call Us</small>
-                                    (866) 620-7617
+                                    +1 (833) 991-7969
                                 </span>
                             </a>
                         </div>
@@ -437,11 +437,11 @@ const About = () => {
                         </Link>
 
                         <a
-                            href="tel:+18666207617"
+                            href="tel:+18339917969"
                             className="about-final__call"
                         >
                             <Phone size={19} />
-                            Call (866) 620-7617
+                            Call +1 (833) 991-7969
                         </a>
 
                     </div>

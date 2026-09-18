@@ -1,46 +1,24 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import "./floating-actions.css";
 
 const PHONE_NUMBER = "+18339917969";
 
 // WhatsApp URL me + use nahi hota
-const WHATSAPP_NUMBER = "18339917969";
+//const WHATSAPP_NUMBER = "18339917969";
 
-const WHATSAPP_MESSAGE =
-    "Hi, I’m visiting GetSSDISupport and would like more information about disability benefit options.";
+//const WHATSAPP_MESSAGE =
+"Hi, I’m visiting GetSSDISupport and would like more information about disability benefit options.";
 
 const FloatingActions = () => {
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-        WHATSAPP_MESSAGE
-    )}`;
+    //const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    //   WHATSAPP_MESSAGE
+    // )}`; //
 
     return (
         <div
             className="gss-floating-actions"
             aria-label="Contact options"
         >
-            {/* ================= WHATSAPP ================= */}
-
-            <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="gss-floating-action gss-floating-action--whatsapp"
-                aria-label="Chat with GetSSDISupport on WhatsApp"
-            >
-                <span className="gss-floating-action__tooltip">
-                    Chat on WhatsApp
-                </span>
-
-                <span className="gss-floating-action__icon">
-                    <MessageCircle size={25} strokeWidth={2.3} />
-                </span>
-
-                <span
-                    className="gss-floating-action__online"
-                    aria-hidden="true"
-                />
-            </a>
 
 
             {/* ================= CALL ================= */}

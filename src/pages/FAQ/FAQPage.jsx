@@ -14,8 +14,8 @@ import {
 import CallCTA from "../../components/CallCTA/CallCTA";
 import "./faq-page.css";
 
-const PHONE_NUMBER = "+18005555555";
-const DISPLAY_PHONE = "+1 (800) 555-5555";
+const PHONE_NUMBER = "+18339917969";
+const DISPLAY_PHONE = "+1 (833) 991-7969";
 
 const categories = [
     "All Questions",

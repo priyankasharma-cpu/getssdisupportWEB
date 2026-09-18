@@ -82,15 +82,15 @@ const Navbar = () => {
                     to="/"
                     className="navbar-logo"
                     onClick={closeMobileMenu}
+                    aria-label="GetSSDI Support Home"
                 >
-                    <span className="navbar-logo__main">
-                        GetSSDI
-                    </span>
-
-                    <span className="navbar-logo__support">
-                        Support
-                    </span>
+                    <img
+                        src="/image/getssdi-logo.png"
+                        alt="GetSSDI Support"
+                        className="navbar-logo__image"
+                    />
                 </Link>
+
 
 
                 {/* ================= DESKTOP NAV ================= */}

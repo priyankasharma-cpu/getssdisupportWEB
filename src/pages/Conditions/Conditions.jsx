@@ -319,7 +319,7 @@ const Conditions = () => {
 
 
                                 <a
-                                    href="tel:+18666207617"
+                                    href="tel:+18339917969"
                                     className="conditions-call-btn"
                                 >
                                     <span>
@@ -332,7 +332,7 @@ const Conditions = () => {
                                         </small>
 
                                         <strong>
-                                            (866) 620-7617
+                                            +1 (833) 991-7969
                                         </strong>
                                     </div>
                                 </a>
@@ -838,7 +838,7 @@ const Conditions = () => {
 
 
                             <a
-                                href="tel:+18666207617"
+                                href="tel:+18339917969"
                                 className="conditions-call__button"
                             >
                                 <Phone size={19} />
@@ -849,7 +849,7 @@ const Conditions = () => {
                                     </small>
 
                                     <strong>
-                                        (866) 620-7617
+                                        +1 (833) 991-7969
                                     </strong>
                                 </div>
                             </a>
@@ -1002,8 +1002,8 @@ const Conditions = () => {
                                         Need more information?
                                     </small>
 
-                                    <a href="tel:+18666207617">
-                                        Call (866) 620-7617
+                                    <a href="tel:+18339917969">
+                                        Call +1 (833) 991-7969
                                     </a>
                                 </div>
 
@@ -1018,8 +1018,8 @@ const Conditions = () => {
 
                                 <div
                                     className={`conditions-faq__item ${openFaq === index
-                                            ? "conditions-faq__item--open"
-                                            : ""
+                                        ? "conditions-faq__item--open"
+                                        : ""
                                         }`}
                                     key={faq.question}
                                 >
@@ -1105,11 +1105,11 @@ const Conditions = () => {
 
 
                             <a
-                                href="tel:+18666207617"
+                                href="tel:+18339917969"
                                 className="conditions-final__call"
                             >
                                 <Phone />
-                                Call (866) 620-7617
+                                Call +1 (833) 991-7969
                             </a>
 
                         </div>

@@ -174,7 +174,7 @@ const AboutSection = () => {
                     <div className="about-support__actions">
 
                         <a
-                            href="#quick-eligibility"
+                            href="tel:+18339917969"
                             className="about-support__btn about-support__btn--primary"
                         >
                             Talk to an Advocate — Free
@@ -183,7 +183,7 @@ const AboutSection = () => {
                         </a>
 
                         <a
-                            href="tel:+18005555555"
+                            href="tel:+18339917969"
                             className="about-support__btn about-support__btn--secondary"
                         >
                             <Phone size={18} />
