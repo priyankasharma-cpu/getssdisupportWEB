@@ -1,0 +1,2141 @@
+/* =========================================================
+   GET SSDI SUPPORT
+   ELIGIBILITY PAGE
+========================================================= */
+
+.eligibility-page {
+    --el-primary: #00504e;
+    --el-dark: #103b3c;
+    --el-deep: #073f3d;
+
+    --el-orange: #f57900;
+    --el-gold: #f59a01;
+    --el-gold-light: #f6ad34;
+
+    --el-text: #173e3d;
+    --el-muted: #687c79;
+
+    --el-light: #f3f9f7;
+    --el-border: #deebe7;
+
+    overflow: hidden;
+
+    color: var(--el-text);
+    background: #fff;
+}
+
+
+.eligibility-container {
+    width: min(1180px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.eligibility-hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 92px 0 105px;
+
+    background:
+        radial-gradient(circle at 84% 18%,
+            rgba(246, 173, 52, .13),
+            transparent 25%),
+        radial-gradient(circle at 10% 85%,
+            rgba(80, 191, 169, .11),
+            transparent 30%),
+        linear-gradient(135deg,
+            #073f3d 0%,
+            #00504e 55%,
+            #09635e 100%);
+}
+
+
+.eligibility-hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    opacity: .7;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .025) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .025) 1px,
+            transparent 1px);
+
+    background-size: 54px 54px;
+
+    pointer-events: none;
+}
+
+
+.eligibility-hero__glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(20px);
+}
+
+
+.eligibility-hero__glow--one {
+    width: 500px;
+    height: 500px;
+
+    top: -330px;
+    right: -100px;
+
+    background: rgba(245, 154, 1, .15);
+}
+
+
+.eligibility-hero__glow--two {
+    width: 430px;
+    height: 430px;
+
+    left: -250px;
+    bottom: -260px;
+
+    background: rgba(75, 190, 166, .14);
+}
+
+
+.eligibility-hero__grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.04fr) minmax(400px, .96fr);
+
+    align-items: center;
+
+    gap: 75px;
+}
+
+
+/* EYEBROW */
+
+.eligibility-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 999px;
+
+    color: #d9eeea;
+
+    background: rgba(255, 255, 255, .07);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .03em;
+
+    backdrop-filter: blur(12px);
+}
+
+
+.eligibility-eyebrow svg {
+    color: var(--el-gold-light);
+}
+
+
+/* TITLE */
+
+.eligibility-hero__title {
+    max-width: 680px;
+
+    margin: 0;
+
+    color: #fff;
+
+    font-size: clamp(43px, 5vw, 67px);
+    line-height: 1.04;
+
+    letter-spacing: -2.5px;
+
+    font-weight: 800;
+}
+
+
+.eligibility-hero__title span {
+    color: var(--el-gold-light);
+}
+
+
+/* DESCRIPTION */
+
+.eligibility-hero__description {
+    max-width: 640px;
+
+    margin: 25px 0 0;
+
+    color: #c6dcd8;
+
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+
+/* TRUST POINTS */
+
+.eligibility-hero__trust {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px 22px;
+
+    margin-top: 27px;
+
+    color: #e4f0ee;
+
+    font-size: 13px;
+    font-weight: 650;
+}
+
+
+.eligibility-hero__trust>div {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.eligibility-hero__trust svg {
+    width: 20px;
+    height: 20px;
+
+    padding: 4px;
+
+    border-radius: 50%;
+
+    color: #7fd3c1;
+
+    background: rgba(127, 211, 193, .13);
+
+    stroke-width: 3;
+}
+
+
+/* ACTIONS */
+
+.eligibility-hero__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 34px;
+}
+
+
+.eligibility-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 57px;
+
+    padding: 0 25px;
+
+    border: 0;
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.eligibility-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+.eligibility-btn--primary {
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            var(--el-gold),
+            var(--el-orange));
+
+    box-shadow:
+        0 15px 35px rgba(245, 121, 0, .3);
+}
+
+
+.eligibility-btn--primary:hover {
+    box-shadow:
+        0 19px 43px rgba(245, 121, 0, .4);
+}
+
+
+/* CALL BUTTON */
+
+.eligibility-call-btn {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 57px;
+
+    padding: 7px 18px 7px 8px;
+
+    border: 1px solid rgba(255, 255, 255, .17);
+    border-radius: 12px;
+
+    color: #fff;
+
+    background: rgba(255, 255, 255, .07);
+
+    text-decoration: none;
+
+    backdrop-filter: blur(14px);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+
+.eligibility-call-btn:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, .11);
+}
+
+
+.eligibility-call-btn__icon {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    color: var(--el-gold-light);
+
+    background: rgba(255, 255, 255, .1);
+}
+
+
+.eligibility-call-btn__text small {
+    display: block;
+
+    margin-bottom: 1px;
+
+    color: #a9c8c3;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.eligibility-call-btn__text strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+
+/* PRIVACY */
+
+.eligibility-hero__privacy {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 18px;
+
+    color: #8fb7b1;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   HERO ELIGIBILITY PANEL
+========================================================= */
+
+.eligibility-hero__panel {
+    position: relative;
+}
+
+
+.eligibility-panel {
+    position: relative;
+
+    padding: 29px;
+
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 26px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, .98),
+            rgba(245, 251, 249, .96));
+
+    box-shadow:
+        0 40px 90px rgba(0, 0, 0, .25);
+}
+
+
+.eligibility-panel__top {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #e3ece9;
+}
+
+
+.eligibility-panel__icon {
+    display: grid;
+    place-items: center;
+
+    flex: 0 0 53px;
+
+    height: 53px;
+
+    border-radius: 15px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            var(--el-primary),
+            #08766f);
+
+    box-shadow:
+        0 10px 25px rgba(0, 80, 78, .2);
+}
+
+
+.eligibility-panel__top span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #e77900;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .11em;
+}
+
+
+.eligibility-panel__top h2 {
+    margin: 0;
+
+    color: #173e3d;
+
+    font-size: 21px;
+    letter-spacing: -.4px;
+}
+
+
+.eligibility-panel__intro {
+    margin: 18px 0;
+
+    color: #70827f;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+
+.eligibility-panel__list {
+    display: grid;
+
+    gap: 11px;
+}
+
+
+.eligibility-panel__item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    border: 1px solid #e4eeeb;
+    border-radius: 13px;
+
+    background: #fff;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.eligibility-panel__item:hover {
+    transform: translateX(4px);
+
+    border-color: #c8e3dc;
+
+    box-shadow:
+        0 8px 22px rgba(16, 59, 60, .07);
+}
+
+
+.eligibility-panel__item>span {
+    display: grid;
+    place-items: center;
+
+    flex: 0 0 27px;
+
+    height: 27px;
+
+    margin-top: 1px;
+
+    border-radius: 8px;
+
+    color: #fff;
+
+    background: #008573;
+}
+
+
+.eligibility-panel__item>span svg {
+    width: 14px;
+
+    stroke-width: 3;
+}
+
+
+.eligibility-panel__item strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #294c49;
+
+    font-size: 12px;
+}
+
+
+.eligibility-panel__item small {
+    display: block;
+
+    color: #7d8e8b;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+.eligibility-panel__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 53px;
+
+    margin-top: 18px;
+
+    border-radius: 11px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            var(--el-gold),
+            var(--el-orange));
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    box-shadow:
+        0 12px 27px rgba(245, 121, 0, .22);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.eligibility-panel__button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 35px rgba(245, 121, 0, .3);
+}
+
+
+.eligibility-panel__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 13px;
+
+    color: #879692;
+
+    font-size: 9px;
+}
+
+
+.eligibility-panel__footer svg {
+    color: #008573;
+}
+
+
+.eligibility-panel-badge {
+    position: absolute;
+
+    top: -18px;
+    right: -22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 10px 14px;
+
+    border-radius: 999px;
+
+    color: #31514e;
+
+    background: #fff;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .16);
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+.eligibility-panel-badge svg {
+    color: var(--el-gold);
+}
+
+
+/* =========================================================
+   TRUST BAR
+========================================================= */
+
+.eligibility-trust-bar {
+    position: relative;
+    z-index: 4;
+
+    background: #fff;
+
+    box-shadow:
+        0 15px 45px rgba(16, 59, 60, .07);
+}
+
+
+.eligibility-trust-bar__grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.eligibility-trust-bar__item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 27px 23px;
+
+    border-right: 1px solid #e4eeeb;
+}
+
+
+.eligibility-trust-bar__item:last-child {
+    border-right: 0;
+}
+
+
+.eligibility-trust-bar__item>svg {
+    width: 25px;
+    height: 25px;
+
+    color: #007b70;
+}
+
+
+.eligibility-trust-bar__item strong {
+    display: block;
+
+    color: #244845;
+
+    font-size: 13px;
+}
+
+
+.eligibility-trust-bar__item span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #81908d;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   GLOBAL HEADING
+========================================================= */
+
+.eligibility-heading {
+    max-width: 730px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.eligibility-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #df7500;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: .14em;
+}
+
+
+.eligibility-heading h2,
+.eligibility-medical__content h2,
+.eligibility-faq__intro h2 {
+    margin: 0;
+
+    color: #173e3d;
+
+    font-size: clamp(35px, 4vw, 49px);
+    line-height: 1.1;
+
+    letter-spacing: -1.6px;
+}
+
+
+.eligibility-heading h2 span,
+.eligibility-medical__content h2 span,
+.eligibility-faq__intro h2 span {
+    color: #e77c00;
+}
+
+
+.eligibility-heading>p {
+    max-width: 630px;
+
+    margin: 17px auto 0;
+
+    color: var(--el-muted);
+
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   PROGRAM CARDS
+========================================================= */
+
+.eligibility-programs {
+    padding: 115px 0;
+
+    background: #fff;
+}
+
+
+.eligibility-programs__grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.eligibility-program-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 34px;
+
+    border: 1px solid var(--el-border);
+    border-radius: 24px;
+
+    background: #fff;
+
+    box-shadow:
+        0 15px 45px rgba(16, 59, 60, .07);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.eligibility-program-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 25px 60px rgba(16, 59, 60, .12);
+}
+
+
+.eligibility-program-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+}
+
+
+.eligibility-program-card--ssdi::before {
+    background:
+        linear-gradient(90deg,
+            #00504e,
+            #0a8a7d);
+}
+
+
+.eligibility-program-card--ssi::before {
+    background:
+        linear-gradient(90deg,
+            #f59a01,
+            #f57900);
+}
+
+
+.eligibility-program-card__header {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.eligibility-program-card__icon {
+    display: grid;
+    place-items: center;
+
+    flex: 0 0 58px;
+
+    height: 58px;
+
+    border-radius: 16px;
+
+    color: #fff;
+}
+
+
+.eligibility-program-card--ssdi .eligibility-program-card__icon {
+    background:
+        linear-gradient(135deg,
+            #00504e,
+            #08776f);
+}
+
+
+.eligibility-program-card--ssi .eligibility-program-card__icon {
+    background:
+        linear-gradient(135deg,
+            #f6ad34,
+            #f57900);
+}
+
+
+.eligibility-program-card__header span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #8a9996;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .13em;
+}
+
+
+.eligibility-program-card__header h3 {
+    display: inline;
+
+    margin: 0;
+
+    color: #173e3d;
+
+    font-size: 26px;
+}
+
+
+.eligibility-program-card__header small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #738481;
+
+    font-size: 10px;
+}
+
+
+.eligibility-program-card__description {
+    margin: 25px 0 22px;
+
+    color: #667a77;
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+.eligibility-program-card__requirements {
+    display: grid;
+
+    gap: 11px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: #f5faf8;
+}
+
+
+.eligibility-program-card__requirements>div {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #405e5b;
+
+    font-size: 12px;
+    font-weight: 650;
+}
+
+
+.eligibility-program-card__requirements svg {
+    width: 19px;
+    height: 19px;
+
+    padding: 4px;
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    background: #008574;
+
+    stroke-width: 3;
+}
+
+
+.eligibility-program-card__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 22px;
+}
+
+
+.eligibility-program-card__bottom>span {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #71827f;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+.eligibility-program-card__bottom>span svg {
+    color: #008574;
+}
+
+
+.eligibility-program-card__bottom a {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    color: #006a64;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+
+
+/* =========================================================
+   MEDICAL
+========================================================= */
+
+.eligibility-medical {
+    padding: 120px 0;
+
+    background: #fff;
+}
+
+
+.eligibility-medical__grid {
+    display: grid;
+
+    grid-template-columns: .9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 100px;
+}
+
+
+.eligibility-medical__visual {
+    position: relative;
+
+    min-height: 500px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(circle at center,
+            #e6f6f2,
+            #f5faf8 55%,
+            #fff7ea);
+}
+
+
+.eligibility-medical__circle {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 280px;
+    height: 280px;
+
+    border: 1px dashed #a9d2c8;
+    border-radius: 50%;
+}
+
+
+.eligibility-medical__circle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    border: 1px solid #d1e7e1;
+    border-radius: 50%;
+}
+
+
+.eligibility-medical__main-icon {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    place-items: center;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 27px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            #00504e,
+            #087b72);
+
+    box-shadow:
+        0 25px 50px rgba(0, 80, 78, .25);
+}
+
+
+.eligibility-medical__main-icon svg {
+    width: 43px;
+    height: 43px;
+}
+
+
+.eligibility-medical__orbit {
+    position: absolute;
+
+    display: grid;
+    place-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    border: 1px solid #deebe7;
+    border-radius: 15px;
+
+    color: #00756b;
+
+    background: #fff;
+
+    box-shadow:
+        0 10px 25px rgba(16, 59, 60, .1);
+}
+
+
+.eligibility-medical__orbit--one {
+    top: -20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+.eligibility-medical__orbit--two {
+    bottom: 15px;
+    left: -5px;
+}
+
+
+.eligibility-medical__orbit--three {
+    bottom: 15px;
+    right: -5px;
+}
+
+
+.eligibility-medical__floating {
+    position: absolute;
+
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px;
+
+    border: 1px solid #e0ebe8;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, .9);
+
+    box-shadow:
+        0 15px 40px rgba(16, 59, 60, .09);
+
+    backdrop-filter: blur(15px);
+}
+
+
+.eligibility-medical__floating>svg {
+    color: #008574;
+}
+
+
+.eligibility-medical__floating strong {
+    display: block;
+
+    color: #294b48;
+
+    font-size: 12px;
+}
+
+
+.eligibility-medical__floating span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #7b8c89;
+
+    font-size: 9px;
+}
+
+
+.eligibility-medical__content>p {
+    margin: 21px 0 0;
+
+    color: #697d79;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+.eligibility-medical__list {
+    display: grid;
+
+    gap: 15px;
+
+    margin-top: 28px;
+}
+
+
+.eligibility-medical__list>div {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+}
+
+
+.eligibility-medical__list>div>span {
+    display: grid;
+    place-items: center;
+
+    flex: 0 0 42px;
+
+    height: 42px;
+
+    border-radius: 12px;
+
+    color: #00756b;
+
+    background: #e8f5f2;
+}
+
+
+.eligibility-medical__list svg {
+    width: 20px;
+}
+
+
+.eligibility-medical__list strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #31514e;
+
+    font-size: 13px;
+}
+
+
+.eligibility-medical__list p {
+    margin: 0;
+
+    color: #788986;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+.eligibility-text-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 29px;
+
+    color: #007169;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CALL OUT
+========================================================= */
+
+.eligibility-callout {
+    padding: 0 0 110px;
+
+    background: #fff;
+}
+
+
+.eligibility-callout__inner {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+
+    gap: 24px;
+
+    padding: 34px 38px;
+
+    overflow: hidden;
+
+    border-radius: 23px;
+
+    background:
+        linear-gradient(135deg,
+            #103b3c,
+            #00504e);
+
+    box-shadow:
+        0 25px 60px rgba(16, 59, 60, .18);
+}
+
+
+.eligibility-callout__icon {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 19px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            #f6ad34,
+            #f57900);
+}
+
+
+.eligibility-callout__ring {
+    position: absolute;
+
+    inset: -7px;
+
+    border: 1px solid rgba(246, 173, 52, .35);
+    border-radius: 24px;
+}
+
+
+.eligibility-callout__content>span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #f6ad34;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .13em;
+}
+
+
+.eligibility-callout__content h2 {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 24px;
+}
+
+
+.eligibility-callout__content p {
+    margin: 7px 0 0;
+
+    color: #b9d0cc;
+
+    font-size: 11px;
+}
+
+
+.eligibility-callout__button {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 19px;
+
+    border-radius: 12px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            #f59a01,
+            #f57900);
+
+    text-decoration: none;
+
+    box-shadow:
+        0 12px 30px rgba(245, 121, 0, .25);
+
+    transition: transform .25s ease;
+}
+
+
+.eligibility-callout__button:hover {
+    transform: translateY(-3px);
+}
+
+
+.eligibility-callout__button small {
+    display: block;
+
+    margin-bottom: 1px;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+.eligibility-callout__button span {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.eligibility-faq {
+    padding: 120px 0;
+
+    background: #fff;
+}
+
+
+.eligibility-faq__grid {
+    display: grid;
+
+    grid-template-columns: .78fr 1.22fr;
+
+    align-items: start;
+
+    gap: 80px;
+}
+
+
+.eligibility-faq__intro {
+    position: sticky;
+
+    top: 120px;
+}
+
+
+.eligibility-faq__intro>p {
+    margin: 19px 0 0;
+
+    color: #71827f;
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+.eligibility-faq__help {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 27px;
+    padding: 15px;
+
+    border: 1px solid #deebe7;
+    border-radius: 14px;
+
+    background: #f5faf8;
+}
+
+
+.eligibility-faq__help>div {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            #f59a01,
+            #f57900);
+}
+
+
+.eligibility-faq__help small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #7c8d89;
+
+    font-size: 9px;
+}
+
+
+.eligibility-faq__help a {
+    color: #005c57;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+.eligibility-faq__items {
+    display: grid;
+
+    gap: 12px;
+}
+
+
+.eligibility-faq__item {
+    overflow: hidden;
+
+    border: 1px solid #deebe7;
+    border-radius: 15px;
+
+    background: #fff;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.eligibility-faq__item--open {
+    border-color: #bddbd4;
+
+    box-shadow:
+        0 12px 30px rgba(16, 59, 60, .06);
+}
+
+
+.eligibility-faq__item button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 21px;
+
+    border: 0;
+
+    color: #31514e;
+    background: transparent;
+
+    text-align: left;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+
+.eligibility-faq__item button svg {
+    flex: 0 0 auto;
+
+    width: 18px;
+
+    color: #008574;
+
+    transition: transform .3s ease;
+}
+
+
+.eligibility-faq__item--open button svg {
+    transform: rotate(180deg);
+}
+
+
+.eligibility-faq__answer {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition: grid-template-rows .3s ease;
+}
+
+
+.eligibility-faq__item--open .eligibility-faq__answer {
+    grid-template-rows: 1fr;
+}
+
+
+.eligibility-faq__answer>div {
+    overflow: hidden;
+}
+
+
+.eligibility-faq__answer p {
+    margin: 0;
+
+    padding: 0 21px 21px;
+
+    color: #758683;
+
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.eligibility-final {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 105px 0;
+
+    background:
+        linear-gradient(135deg,
+            #103b3c,
+            #00504e);
+}
+
+
+.eligibility-final__glow {
+    position: absolute;
+
+    width: 550px;
+    height: 550px;
+
+    left: 50%;
+    top: -390px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: rgba(246, 173, 52, .17);
+
+    filter: blur(25px);
+}
+
+
+.eligibility-final__content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+}
+
+
+.eligibility-final__badge {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 20px;
+    padding: 8px 13px;
+
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 999px;
+
+    color: #d7eae7;
+
+    background: rgba(255, 255, 255, .07);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.eligibility-final__badge svg {
+    color: var(--el-gold-light);
+}
+
+
+.eligibility-final h2 {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    color: #fff;
+
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+}
+
+
+.eligibility-final h2 span {
+    color: var(--el-gold-light);
+}
+
+
+.eligibility-final>div>p {
+    max-width: 600px;
+
+    margin: 18px auto 0;
+
+    color: #c2d8d4;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+.eligibility-final__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 32px;
+}
+
+
+.eligibility-final__call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 57px;
+
+    padding: 0 24px;
+
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 12px;
+
+    color: #fff;
+
+    background: rgba(255, 255, 255, .08);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+
+.eligibility-final__call:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, .13);
+}
+
+
+.eligibility-final__call svg {
+    color: var(--el-gold-light);
+}
+
+
+.eligibility-final__note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 20px;
+
+    color: #9fc0ba;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .eligibility-hero__grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .eligibility-hero__content {
+        max-width: 760px;
+
+        margin-inline: auto;
+
+        text-align: center;
+    }
+
+
+    .eligibility-hero__description {
+        margin-inline: auto;
+    }
+
+
+    .eligibility-hero__trust,
+    .eligibility-hero__actions,
+    .eligibility-hero__privacy {
+        justify-content: center;
+    }
+
+
+    .eligibility-hero__panel {
+        width: min(600px, 100%);
+
+        margin-inline: auto;
+    }
+
+
+    .eligibility-trust-bar__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .eligibility-trust-bar__item:nth-child(2) {
+        border-right: 0;
+    }
+
+
+
+
+    .eligibility-medical__grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .eligibility-medical__visual {
+        width: min(650px, 100%);
+
+        margin-inline: auto;
+    }
+
+
+    .eligibility-callout__inner {
+        grid-template-columns: auto 1fr;
+    }
+
+
+    .eligibility-callout__button {
+        grid-column: 1 / -1;
+
+        justify-self: center;
+    }
+
+
+    .eligibility-faq__grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .eligibility-faq__intro {
+        position: static;
+
+        max-width: 700px;
+
+        text-align: center;
+
+        margin-inline: auto;
+    }
+
+
+    .eligibility-faq__help {
+        width: max-content;
+        max-width: 100%;
+
+        margin-inline: auto;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .eligibility-container {
+        width: min(100% - 30px, 1180px);
+    }
+
+
+    .eligibility-hero {
+        padding: 58px 0 70px;
+    }
+
+
+    .eligibility-hero__title {
+        font-size: 39px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .eligibility-hero__description {
+        font-size: 15px;
+    }
+
+
+    .eligibility-hero__trust {
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: max-content;
+        max-width: 100%;
+
+        margin-inline: auto;
+    }
+
+
+    .eligibility-hero__actions {
+        flex-direction: column;
+    }
+
+
+    .eligibility-btn,
+    .eligibility-call-btn {
+        width: 100%;
+    }
+
+
+    .eligibility-call-btn {
+        justify-content: center;
+    }
+
+
+    .eligibility-panel {
+        padding: 21px 17px;
+
+        border-radius: 20px;
+    }
+
+
+    .eligibility-panel-badge {
+        position: static;
+
+        width: max-content;
+
+        margin: 13px auto 0;
+    }
+
+
+    .eligibility-trust-bar__grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .eligibility-trust-bar__item {
+        border-right: 0;
+        border-bottom: 1px solid #e4eeeb;
+    }
+
+
+    .eligibility-trust-bar__item:last-child {
+        border-bottom: 0;
+    }
+
+
+    .eligibility-programs,
+    .eligibility-medical,
+    .eligibility-faq {
+        padding: 78px 0;
+    }
+
+
+    .eligibility-programs__grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .eligibility-program-card {
+        padding: 25px 20px;
+    }
+
+
+    .eligibility-program-card__bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+
+
+    .eligibility-factor-card {
+        min-height: auto;
+    }
+
+
+    .eligibility-heading {
+        margin-bottom: 38px;
+    }
+
+
+    .eligibility-heading h2,
+    .eligibility-medical__content h2,
+    .eligibility-faq__intro h2 {
+        font-size: 35px;
+
+        letter-spacing: -1.2px;
+    }
+
+
+    .eligibility-medical__visual {
+        min-height: 440px;
+    }
+
+
+    .eligibility-medical__circle {
+        width: 230px;
+        height: 230px;
+    }
+
+
+    .eligibility-medical__circle::before {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    .eligibility-medical__main-icon {
+        width: 85px;
+        height: 85px;
+    }
+
+
+    .eligibility-medical__floating {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+    }
+
+
+    .eligibility-callout {
+        padding-bottom: 75px;
+    }
+
+
+    .eligibility-callout__inner {
+        grid-template-columns: 1fr;
+
+        padding: 28px 21px;
+
+        text-align: center;
+    }
+
+
+    .eligibility-callout__icon {
+        margin-inline: auto;
+    }
+
+
+    .eligibility-callout__button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .eligibility-final {
+        padding: 80px 0;
+    }
+
+
+    .eligibility-final h2 {
+        font-size: 38px;
+
+        letter-spacing: -1.4px;
+    }
+
+
+    .eligibility-final__actions {
+        flex-direction: column;
+    }
+
+
+    .eligibility-final__actions .eligibility-btn,
+    .eligibility-final__call {
+        width: 100%;
+    }
+
+}

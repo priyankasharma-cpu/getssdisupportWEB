@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Phone, ArrowRight } from "lucide-react";
+import { Menu, X, Phone, ArrowRight, ClipboardCheck, } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./navbar.css";
 
@@ -15,11 +15,7 @@ const Navbar = () => {
             type: "route",
             path: "/",
         },
-        {
-            label: "Eligibility",
-            type: "section",
-            id: "eligibility",
-        },
+        { label: "Eligibility", type: "route", path: "/eligibility" },
         {
             label: "How It Works",
             type: "section",
@@ -175,15 +171,22 @@ const Navbar = () => {
                     <button
                         type="button"
                         className="navbar-cta"
-                        onClick={() =>
-                            scrollToSection("eligibility")
-                        }
+                        onClick={() => scrollToSection("lead-form")}
+                        aria-label="Get a free disability evaluation"
                     >
-                        <span>
+                        <span className="navbar-cta__icon">
+                            <ClipboardCheck size={18} aria-hidden="true" />
+                        </span>
+
+                        <span className="navbar-cta__text">
                             Get a Free Evaluation
                         </span>
 
-                        <ArrowRight size={16} />
+                        <ArrowRight
+                            className="navbar-cta__arrow"
+                            size={16}
+                            aria-hidden="true"
+                        />
                     </button>
 
                 </div>

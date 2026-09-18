@@ -23,11 +23,40 @@
     -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
 }
 
-.eligibility-section__orb { position: absolute; z-index: -1; border-radius: 50%; pointer-events: none; filter: blur(20px); }
-.eligibility-section__orb--one { width: 420px; height: 420px; top: -240px; left: -220px; background: radial-gradient(circle, rgba(246, 173, 52, .18), transparent 70%); }
-.eligibility-section__orb--two { width: 460px; height: 460px; right: -250px; bottom: -250px; background: radial-gradient(circle, rgba(0, 80, 78, .16), transparent 70%); }
-.eligibility-section__container { width: min(var(--container-width, 1200px), calc(100% - 64px)); margin: 0 auto; }
-.eligibility-section__header { max-width: 760px; margin: 0 auto clamp(42px, 5vw, 58px); text-align: center; }
+.eligibility-section__orb {
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(20px);
+}
+
+.eligibility-section__orb--one {
+    width: 420px;
+    height: 420px;
+    top: -240px;
+    left: -220px;
+    background: radial-gradient(circle, rgba(246, 173, 52, .18), transparent 70%);
+}
+
+.eligibility-section__orb--two {
+    width: 460px;
+    height: 460px;
+    right: -250px;
+    bottom: -250px;
+    background: radial-gradient(circle, rgba(0, 80, 78, .16), transparent 70%);
+}
+
+.eligibility-section__container {
+    width: min(var(--container-width, 1200px), calc(100% - 64px));
+    margin: 0 auto;
+}
+
+.eligibility-section__header {
+    max-width: 760px;
+    margin: 0 auto clamp(42px, 5vw, 58px);
+    text-align: center;
+}
 
 .eligibility-section__eyebrow {
     width: fit-content;
@@ -49,11 +78,49 @@
     text-transform: uppercase;
 }
 
-.eligibility-section__header h2 { margin: 0; color: var(--eligibility-ink); font-size: clamp(42px, 4.4vw, 58px); line-height: 1.07; letter-spacing: -.048em; font-weight: 850; text-wrap: balance; }
-.eligibility-section__header h2 span { position: relative; display: inline-block; color: var(--eligibility-emerald); white-space: nowrap; }
-.eligibility-section__header h2 span::after { content: ""; position: absolute; right: 2%; bottom: -6px; left: 2%; height: 8px; z-index: -1; border-radius: 999px; background: linear-gradient(90deg, rgba(245, 154, 1, .1), rgba(245, 154, 1, .4), rgba(0, 80, 78, .13)); transform: rotate(-.7deg); }
-.eligibility-section__header p { max-width: 690px; margin: 22px auto 0; color: var(--eligibility-muted); font-size: clamp(16px, 1.4vw, 18px); line-height: 1.7; }
-.eligibility-section__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.eligibility-section__header h2 {
+    margin: 0;
+    color: var(--eligibility-ink);
+    font-size: clamp(42px, 4.4vw, 58px);
+    line-height: 1.07;
+    letter-spacing: -.048em;
+    font-weight: 850;
+    text-wrap: balance;
+}
+
+.eligibility-section__header h2 span {
+    position: relative;
+    display: inline-block;
+    color: var(--eligibility-emerald);
+    white-space: nowrap;
+}
+
+.eligibility-section__header h2 span::after {
+    content: "";
+    position: absolute;
+    right: 2%;
+    bottom: -6px;
+    left: 2%;
+    height: 8px;
+    z-index: -1;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(245, 154, 1, .1), rgba(245, 154, 1, .4), rgba(0, 80, 78, .13));
+    transform: rotate(-.7deg);
+}
+
+.eligibility-section__header p {
+    max-width: 690px;
+    margin: 22px auto 0;
+    color: var(--eligibility-muted);
+    font-size: clamp(16px, 1.4vw, 18px);
+    line-height: 1.7;
+}
+
+.eligibility-section__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
 
 .eligibility-card {
     --card-accent: 0, 80, 78;
@@ -71,65 +138,575 @@
     transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
-.eligibility-card::before { content: ""; position: absolute; width: 140px; height: 140px; right: -62px; top: -62px; border-radius: 50%; background: radial-gradient(circle, rgba(var(--card-accent), .13), transparent 70%); transition: transform 250ms ease; }
-.eligibility-card::after { content: ""; position: absolute; inset: 0 22% auto 0; height: 2px; opacity: .52; background: linear-gradient(90deg, rgba(var(--card-accent), .7), transparent); }
-.eligibility-card:hover { transform: translateY(-5px); border-color: rgba(var(--card-accent), .28); box-shadow: 0 24px 50px rgba(14, 41, 55, .12), inset 0 1px 0 rgba(255, 255, 255, .98); }
-.eligibility-card:hover::before { transform: scale(1.12); }
-.eligibility-card--teal { --card-accent: 16, 59, 60; --card-accent-soft: 230, 242, 240; }
-.eligibility-card--gold { --card-accent: 205, 122, 0; --card-accent-soft: 255, 246, 226; }
-.eligibility-card--blue { --card-accent: 49, 105, 137; --card-accent-soft: 232, 242, 247; }
-.eligibility-card--peach { --card-accent: 194, 102, 59; --card-accent-soft: 255, 239, 231; }
+.eligibility-card::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    right: -62px;
+    top: -62px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(var(--card-accent), .13), transparent 70%);
+    transition: transform 250ms ease;
+}
 
-.eligibility-card__number { position: absolute; top: 21px; right: 22px; color: rgba(var(--card-accent), .15); font-size: 31px; line-height: 1; font-weight: 900; letter-spacing: -.05em; }
-.eligibility-card__icon { position: relative; width: 52px; height: 52px; margin-bottom: 24px; display: grid; place-items: center; border: 1px solid rgba(var(--card-accent), .13); border-radius: 15px; color: rgb(var(--card-accent)); background: linear-gradient(135deg, rgba(var(--card-accent), .13), rgba(255, 255, 255, .8)); box-shadow: 0 8px 20px rgba(var(--card-accent), .1), inset 0 1px 0 rgba(255, 255, 255, .8); transition: color 220ms ease, background 220ms ease, box-shadow 220ms ease; }
-.eligibility-card:hover .eligibility-card__icon { color: #fff; background: linear-gradient(135deg, rgba(var(--card-accent), .98), rgba(var(--card-accent), .72)); box-shadow: 0 11px 24px rgba(var(--card-accent), .2); }
-.eligibility-card h3 { margin: 0; color: var(--eligibility-ink); font-size: 19px; line-height: 1.32; font-weight: 800; letter-spacing: -.02em; }
-.eligibility-card p { margin: 10px 0 0; color: var(--eligibility-muted); font-size: 14.5px; line-height: 1.65; }
+.eligibility-card::after {
+    content: "";
+    position: absolute;
+    inset: 0 22% auto 0;
+    height: 2px;
+    opacity: .52;
+    background: linear-gradient(90deg, rgba(var(--card-accent), .7), transparent);
+}
 
-.eligibility-section__cta { position: relative; overflow: hidden; margin-top: 32px; padding: 27px 29px; display: flex; align-items: center; justify-content: space-between; gap: 28px; border: 1px solid rgba(0, 80, 78, .11); border-radius: 21px; background: linear-gradient(135deg, rgba(234, 247, 244, .94), rgba(255, 248, 233, .91)); box-shadow: 0 15px 38px rgba(14, 41, 55, .07), inset 0 1px 0 rgba(255, 255, 255, .78); }
-.eligibility-section__cta::after { content: ""; position: absolute; width: 220px; height: 220px; right: 11%; bottom: -170px; border-radius: 50%; background: rgba(246, 173, 52, .12); filter: blur(8px); pointer-events: none; }
-.eligibility-section__cta span { display: block; color: var(--eligibility-muted); font-size: 13px; line-height: 1.5; }
-.eligibility-section__cta strong { display: block; margin-top: 4px; color: var(--eligibility-ink); font-size: 18px; font-weight: 800; }
+.eligibility-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(var(--card-accent), .28);
+    box-shadow: 0 24px 50px rgba(14, 41, 55, .12), inset 0 1px 0 rgba(255, 255, 255, .98);
+}
 
-.eligibility-section__button { position: relative; z-index: 1; min-height: 52px; flex: 0 0 auto; padding: 0 23px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 13px; color: #fff; text-decoration: none; font-size: 14px; font-weight: 800; background: linear-gradient(135deg, #f6ad34 0%, #f59a01 48%, #f57900 100%); box-shadow: 0 12px 27px rgba(245, 121, 0, .25); transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease; }
-.eligibility-section__button:hover { transform: translateY(-2px); filter: saturate(1.08); box-shadow: 0 17px 34px rgba(245, 121, 0, .32); }
-.eligibility-section__button:focus-visible { outline: 3px solid rgba(14, 41, 55, .82); outline-offset: 4px; }
+.eligibility-card:hover::before {
+    transform: scale(1.12);
+}
 
-html.dark-theme .eligibility-section { --eligibility-ink: #f4fbfa; --eligibility-muted: #b7cbc9; background: radial-gradient(circle at 8% 18%, rgba(246, 173, 52, .08), transparent 27%), radial-gradient(circle at 90% 82%, rgba(65, 172, 156, .1), transparent 30%), linear-gradient(180deg, #0e2937 0%, #103b3c 100%); }
-html.dark-theme .eligibility-section::before { opacity: .2; }
-html.dark-theme .eligibility-section__eyebrow { color: #9aded5; background: rgba(255, 255, 255, .055); border-color: rgba(157, 221, 211, .16); }
-html.dark-theme .eligibility-section__header h2 span { color: #9aded5; }
-html.dark-theme .eligibility-card { border-color: rgba(var(--card-accent), .28); background: linear-gradient(145deg, rgba(255, 255, 255, .07), rgba(6, 29, 35, .3)); box-shadow: 0 16px 38px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .06); }
-html.dark-theme .eligibility-card__number { color: rgba(175, 229, 220, .15); }
-html.dark-theme .eligibility-card__icon { color: #a0ded6; border-color: rgba(160, 222, 214, .14); background: linear-gradient(135deg, rgba(var(--card-accent), .32), rgba(255, 255, 255, .055)); }
-html.dark-theme .eligibility-section__cta { border-color: rgba(169, 222, 214, .13); background: linear-gradient(135deg, rgba(255, 255, 255, .07), rgba(246, 173, 52, .055)); }
-html.dark-theme .eligibility-section__button:focus-visible { outline-color: #fff; }
+.eligibility-card--teal {
+    --card-accent: 16, 59, 60;
+    --card-accent-soft: 230, 242, 240;
+}
+
+.eligibility-card--gold {
+    --card-accent: 205, 122, 0;
+    --card-accent-soft: 255, 246, 226;
+}
+
+.eligibility-card--blue {
+    --card-accent: 49, 105, 137;
+    --card-accent-soft: 232, 242, 247;
+}
+
+.eligibility-card--peach {
+    --card-accent: 194, 102, 59;
+    --card-accent-soft: 255, 239, 231;
+}
+
+.eligibility-card__number {
+    position: absolute;
+    top: 21px;
+    right: 22px;
+    color: rgba(var(--card-accent), .15);
+    font-size: 31px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -.05em;
+}
+
+.eligibility-card__icon {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 24px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(var(--card-accent), .13);
+    border-radius: 15px;
+    color: rgb(var(--card-accent));
+    background: linear-gradient(135deg, rgba(var(--card-accent), .13), rgba(255, 255, 255, .8));
+    box-shadow: 0 8px 20px rgba(var(--card-accent), .1), inset 0 1px 0 rgba(255, 255, 255, .8);
+    transition: color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+.eligibility-card:hover .eligibility-card__icon {
+    color: #fff;
+    background: linear-gradient(135deg, rgba(var(--card-accent), .98), rgba(var(--card-accent), .72));
+    box-shadow: 0 11px 24px rgba(var(--card-accent), .2);
+}
+
+.eligibility-card h3 {
+    margin: 0;
+    color: var(--eligibility-ink);
+    font-size: 19px;
+    line-height: 1.32;
+    font-weight: 800;
+    letter-spacing: -.02em;
+}
+
+.eligibility-card p {
+    margin: 10px 0 0;
+    color: var(--eligibility-muted);
+    font-size: 14.5px;
+    line-height: 1.65;
+}
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.eligibility-section__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-top: 50px;
+    padding: 27px 30px;
+
+    border: 1px solid rgba(0, 80, 78, 0.12);
+    border-radius: 20px;
+
+    background:
+        radial-gradient(circle at 85% 10%,
+            rgba(246, 173, 52, 0.12),
+            transparent 28%),
+        linear-gradient(135deg,
+            #f5faf8 0%,
+            #ffffff 100%);
+
+    box-shadow:
+        0 16px 45px rgba(16, 59, 60, 0.08);
+}
+
+
+/* CONTENT */
+
+.eligibility-section__cta-content {
+    min-width: 220px;
+}
+
+.eligibility-section__cta-content span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #71827f;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.eligibility-section__cta-content strong {
+    display: block;
+
+    color: #103b3c;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* ACTION WRAPPER */
+
+.eligibility-section__cta-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+
+/* COMMON BUTTON */
+
+.eligibility-section__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 56px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.eligibility-section__button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   CHECK ELIGIBILITY BUTTON
+========================================================= */
+
+.eligibility-section__button--eligibility {
+    padding: 0 22px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #f59a01,
+            #f57900);
+
+    box-shadow:
+        0 12px 28px rgba(245, 121, 0, 0.23);
+}
+
+.eligibility-section__button--eligibility:hover {
+    box-shadow:
+        0 17px 35px rgba(245, 121, 0, 0.32);
+}
+
+
+/* =========================================================
+   CALL BUTTON
+========================================================= */
+
+.eligibility-section__button--call {
+    position: relative;
+
+    gap: 11px;
+
+    padding: 6px 18px 6px 7px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #103b3c,
+            #00504e);
+
+    box-shadow:
+        0 12px 28px rgba(0, 80, 78, 0.2);
+}
+
+.eligibility-section__button--call:hover {
+    box-shadow:
+        0 17px 38px rgba(0, 80, 78, 0.28);
+}
+
+
+/* CALL ICON */
+
+.eligibility-section__call-icon {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 43px;
+    height: 43px;
+
+    flex: 0 0 43px;
+
+    border-radius: 11px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #f6ad34,
+            #f57900);
+}
+
+.eligibility-section__call-icon svg {
+    position: relative;
+    z-index: 3;
+
+    animation: eligibilityPhoneShake 1.8s ease-in-out infinite;
+}
+
+
+/* INCOMING CALL RING */
+
+.eligibility-section__call-ring {
+    position: absolute;
+
+    inset: -5px;
+
+    border: 2px solid rgba(245, 154, 1, 0.55);
+    border-radius: 15px;
+
+    opacity: 0;
+
+    animation: eligibilityCallRing 1.8s ease-out infinite;
+}
+
+
+/* SECOND RING */
+
+.eligibility-section__call-icon::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -5px;
+
+    border: 1px solid rgba(246, 173, 52, 0.45);
+    border-radius: 15px;
+
+    opacity: 0;
+
+    animation:
+        eligibilityCallRing 1.8s ease-out 0.6s infinite;
+}
+
+
+/* PHONE TEXT */
+
+.eligibility-section__call-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.15;
+}
+
+.eligibility-section__call-text small {
+    margin-bottom: 3px;
+
+    color: #b9d5d0;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.eligibility-section__call-text strong {
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CALL ANIMATIONS
+========================================================= */
+
+@keyframes eligibilityCallRing {
+
+    0% {
+        transform: scale(0.85);
+        opacity: 0.8;
+    }
+
+    70% {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+}
+
+
+@keyframes eligibilityPhoneShake {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(-10deg);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    30% {
+        transform: rotate(-8deg);
+    }
+
+    40% {
+        transform: rotate(8deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .eligibility-section__cta {
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 24px;
+
+        text-align: center;
+    }
+
+    .eligibility-section__cta-actions {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .eligibility-section__cta {
+        gap: 21px;
+
+        margin-top: 35px;
+        padding: 21px 16px;
+
+        border-radius: 17px;
+    }
+
+    .eligibility-section__cta-content strong {
+        font-size: 17px;
+    }
+
+    .eligibility-section__cta-actions {
+        flex-direction: column;
+    }
+
+    .eligibility-section__button {
+        width: 100%;
+    }
+
+    .eligibility-section__button--call {
+        justify-content: center;
+    }
+}
+
+html.dark-theme .eligibility-section {
+    --eligibility-ink: #f4fbfa;
+    --eligibility-muted: #b7cbc9;
+    background: radial-gradient(circle at 8% 18%, rgba(246, 173, 52, .08), transparent 27%), radial-gradient(circle at 90% 82%, rgba(65, 172, 156, .1), transparent 30%), linear-gradient(180deg, #0e2937 0%, #103b3c 100%);
+}
+
+html.dark-theme .eligibility-section::before {
+    opacity: .2;
+}
+
+html.dark-theme .eligibility-section__eyebrow {
+    color: #9aded5;
+    background: rgba(255, 255, 255, .055);
+    border-color: rgba(157, 221, 211, .16);
+}
+
+html.dark-theme .eligibility-section__header h2 span {
+    color: #9aded5;
+}
+
+html.dark-theme .eligibility-card {
+    border-color: rgba(var(--card-accent), .28);
+    background: linear-gradient(145deg, rgba(255, 255, 255, .07), rgba(6, 29, 35, .3));
+    box-shadow: 0 16px 38px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .06);
+}
+
+html.dark-theme .eligibility-card__number {
+    color: rgba(175, 229, 220, .15);
+}
+
+html.dark-theme .eligibility-card__icon {
+    color: #a0ded6;
+    border-color: rgba(160, 222, 214, .14);
+    background: linear-gradient(135deg, rgba(var(--card-accent), .32), rgba(255, 255, 255, .055));
+}
+
+html.dark-theme .eligibility-section__button:focus-visible {
+    outline-color: #fff;
+}
 
 @media (max-width: 950px) {
-    .eligibility-section { padding: 78px 0; }
-    .eligibility-section__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .eligibility-section {
+        padding: 78px 0;
+    }
+
+    .eligibility-section__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 620px) {
-    .eligibility-section { padding: 62px 0; }
-    .eligibility-section__container { width: calc(100% - 32px); }
-    .eligibility-section__header { margin-bottom: 35px; text-align: left; }
-    .eligibility-section__eyebrow { margin: 0 0 16px; }
-    .eligibility-section__header h2 { font-size: clamp(34px, 10vw, 38px); line-height: 1.1; }
-    .eligibility-section__header p { margin-top: 19px; font-size: 16px; }
-    .eligibility-section__grid { grid-template-columns: 1fr; gap: 14px; }
-    .eligibility-card { min-height: 0; padding: 23px 21px; }
-    .eligibility-card__icon { margin-bottom: 19px; }
-    .eligibility-section__cta { margin-top: 20px; padding: 23px 21px; flex-direction: column; align-items: stretch; gap: 20px; }
-    .eligibility-section__button { width: 100%; }
+    .eligibility-section {
+        padding: 62px 0;
+    }
+
+    .eligibility-section__container {
+        width: calc(100% - 32px);
+    }
+
+    .eligibility-section__header {
+        margin-bottom: 35px;
+        text-align: left;
+    }
+
+    .eligibility-section__eyebrow {
+        margin: 0 0 16px;
+    }
+
+    .eligibility-section__header h2 {
+        font-size: clamp(34px, 10vw, 38px);
+        line-height: 1.1;
+    }
+
+    .eligibility-section__header p {
+        margin-top: 19px;
+        font-size: 16px;
+    }
+
+    .eligibility-section__grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .eligibility-card {
+        min-height: 0;
+        padding: 23px 21px;
+    }
+
+    .eligibility-card__icon {
+        margin-bottom: 19px;
+    }
+
+    .eligibility-section__cta {
+        margin-top: 20px;
+        padding: 23px 21px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .eligibility-section__button {
+        width: 100%;
+    }
 }
 
 @media (max-width: 390px) {
-    .eligibility-section__container { width: calc(100% - 28px); }
-    .eligibility-section__header h2 span { white-space: normal; }
+    .eligibility-section__container {
+        width: calc(100% - 28px);
+    }
+
+    .eligibility-section__header h2 span {
+        white-space: normal;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .eligibility-card, .eligibility-card::before, .eligibility-card__icon, .eligibility-section__button { transition-duration: .01ms; }
-    .eligibility-card:hover, .eligibility-section__button:hover { transform: none; }
+
+    .eligibility-card,
+    .eligibility-card::before,
+    .eligibility-card__icon,
+    .eligibility-section__button {
+        transition-duration: .01ms;
+    }
+
+    .eligibility-card:hover,
+    .eligibility-section__button:hover {
+        transform: none;
+    }
 }

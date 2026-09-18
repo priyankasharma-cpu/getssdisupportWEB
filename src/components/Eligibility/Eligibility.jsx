@@ -6,7 +6,9 @@ import {
     FileWarning,
     HeartPulse,
     ShieldCheck,
+    PhoneIncoming,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import "./eligibility.css";
 
@@ -119,7 +121,7 @@ const Eligibility = () => {
                 {/* BOTTOM CTA */}
                 <div className="eligibility-section__cta">
 
-                    <div>
+                    <div className="eligibility-section__cta-content">
                         <span>
                             Not sure if any of these apply to you?
                         </span>
@@ -129,13 +131,45 @@ const Eligibility = () => {
                         </strong>
                     </div>
 
-                    <a
-                        href="#quick-eligibility"
-                        className="eligibility-section__button"
-                    >
-                        Get Free Disability Support
-                        <ArrowRight size={18} aria-hidden="true" />
-                    </a>
+
+                    <div className="eligibility-section__cta-actions">
+
+                        {/* CHECK ELIGIBILITY */}
+                        <Link
+                            to="/#lead-form"
+                            className="eligibility-section__button eligibility-section__button--eligibility"
+                        >
+                            Check Free Eligibility
+
+                            <ArrowRight
+                                size={18}
+                                aria-hidden="true"
+                            />
+                        </Link>
+
+
+                        {/* DIRECT CALL */}
+                        <a
+                            href="tel:+18339917969"
+                            className="eligibility-section__button eligibility-section__button--call"
+                            aria-label="Call now at +1 833 991 7969"
+                        >
+                            <span className="eligibility-section__call-icon">
+                                <span className="eligibility-section__call-ring" />
+
+                                <PhoneIncoming
+                                    size={19}
+                                    aria-hidden="true"
+                                />
+                            </span>
+
+                            <span className="eligibility-section__call-text">
+                                <small>Call Now</small>
+                                <strong>+1 (833) 991-7969</strong>
+                            </span>
+                        </a>
+
+                    </div>
 
                 </div>
 
